@@ -51,7 +51,8 @@ h6 {
 }
 
 section {
-  padding: 8rem 0;
+  height: calc(100vh - 57px);
+  padding-top: 4rem;
 }
 
 .section-heading {
@@ -246,4 +247,10 @@ header.masthead p {
 
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+}
+
+#mockup{
+  height: auto; 
+  width: auto; 
+  max-height: 70%;
 }
