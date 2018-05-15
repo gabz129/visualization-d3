@@ -70,5 +70,8 @@ function d3Visualization(canvas) {
                 .html((d.key) + "<br>" + (d.value) + "mts" );
             })
                 .on("mouseout", function(d){ tooltip.style("display", "none");});
+            
+            renderScatterPlot(["Argentina", "Spain", "China"], 2000, 2018);
     });
+
 }
