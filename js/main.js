@@ -39,5 +39,5 @@ $(function($) {
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  d3Visualization(d3.select("#d3-container"))
+  init();
 }); // End of use strict
