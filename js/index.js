@@ -1,3 +1,17 @@
+var countryClass = "flag flag-32 flag-";
+var countryIsoCode = {
+    Argentina: countryClass + "ar",
+    England: countryClass + "england",
+    Portugal: countryClass + "pt",
+    Hungary: countryClass + "hu",
+    Mexico: countryClass + "mx",
+    Chile: countryClass + "cl",
+    Spain: countryClass + "es",
+    France: countryClass + "fr",
+    Japan: countryClass + "jp",
+    Italy: countryClass + "it",
+    China: countryClass + "cn"
+}
 var rawData = {};
 function processData(raw_data, startYear, endYear) {
     if ( !startYear ) startYear = 0;
@@ -33,8 +47,6 @@ function init() {
         rawData = data;
         renderBarChart();
     });
-
-
 }
 
 function renderBarChart(startYear, endYear) {
@@ -43,7 +55,7 @@ function renderBarChart(startYear, endYear) {
     var canvas = d3.select("#d3-container");
     canvas.selectAll("*").remove();
 
-    var svg = canvas.append("svg").attr("width", 250).attr("height", 500);
+    var svg = canvas.append("svg").attr("width", 250).attr("height", 500).attr("id", "svg_p");
     var margin = {top: 20, right: 20, bottom: 30, left: 80};
     var width = 250 - margin.left - margin.right;
     var height = 500 - margin.top - margin.bottom;
@@ -54,40 +66,68 @@ function renderBarChart(startYear, endYear) {
     var y = d3.scaleBand().range([height, 0]);
 
     var g = svg.append("g")
+            .attr("id", "barChart_p")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     x.domain([0, d3.max(data, function(d) { return d.value; })]);
     y.domain(data.map(function(d) { return d.key; })).padding(0.1);
 
 
-        g.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")");
-            // .call(d3.axisBottom(x)
-            //     // Agrega lineas verticales
-            //     .ticks(0)
-            //     //.tickFormat(function(d) { return parseInt(d / 1000); }).tickSizeInner(0)
-            // );
+    g.append("g")
+        .attr("class", "y axis")
+        .call(d3.axisLeft(y));
 
+    var bar = g.selectAll(".bar");
+    
+    bar.data(data)
+        .enter().append("g")
+        .on("mousemove", function(d){
+            tooltip
+            .style("left", d3.event.pageX - 20 + "px")
+            .style("top", d3.event.pageY - 40 + "px")
+            .style("display", "inline-block")
+            .html((d.key) + "<br>" + (d.value) + " mts" );
+        })
+        .on("mouseout", function(d){ tooltip.style("display", "none");})
+        .attr("class", "barContainer").append("rect")
+        .attr("class", "bar")
+        .attr("x", 0)
+        .attr("height", y.bandwidth())
+        .attr("y", function(d) { return y(d.key); })
+        .attr("width", function(d) { return x(d.value); });
         
-        g.append("g")
-            .attr("class", "y axis")
-            .call(d3.axisLeft(y));
+    d3.selectAll(".barContainer").data(data).append("text")
+    .attr("y", function (d, i) { return (10 - i) * 40 + (32 - i/2)  })
+    .text(function(d){
+        return d.key;
+    });
 
-        g.selectAll(".bar")
-            .data(data)
-        .enter().append("rect")
-            .attr("class", "bar")
-            .attr("x", 0)
-            .attr("height", y.bandwidth())
-            .attr("y", function(d) { return y(d.key); })
-            .attr("width", function(d) { return x(d.value); })
-            .on("mousemove", function(d){
-                tooltip
-                .style("left", d3.event.pageX - 50 + "px")
-                .style("top", d3.event.pageY - 70 + "px")
-                .style("display", "inline-block")
-                .html((d.key) + "<br>" + (d.value) + "mts" );
-            })
-            .on("mouseout", function(d){ tooltip.style("display", "none");});
+    var chkAndFlagsContainer = d3.selectAll(".y.axis").selectAll("g")
+        .data(data)
+        .append("g")
+        .attr("transform", "translate(-60,-18)")
+        .append("foreignObject")
+        .attr("width","48px")
+        .attr("height","48px")
+        .append("xhtml:body")
+        .attr("style", "background-color: transparent;");
+
+    chkAndFlagsContainer.append("input")
+        .attr('style', 'vertical-align: super;')
+        .attr('type','checkbox')
+        .attr('class','chk_barChart_country')
+        .attr("checked", true)
+        .on("change", function (d) {
+            var countries = d3.selectAll('.chk_barChart_country')
+                .nodes()
+                .filter(function (e) { return d3.select(e).property('checked') })
+                .map(e => d3.select(e).datum().key);
+            renderTimeLine(countries);
+            renderScatterPlot(countries, startYear, endYear);
+        });
+
+    chkAndFlagsContainer
+        .append("image")
+        .attr("class", function(d) { return countryIsoCode[d.key]});
+
 }

@@ -263,21 +263,26 @@ body {
   fill: #5f89ad;
 }
 
-.axis {
+#barChart_p > .axis {
   font-size: 15px;
 }
 
-g .tick {
+ /* hide y axis labels */
+ #barChart_p > .y.axis > g > text {
+  display: none;
+}
+
+#barChart_p > g .tick {
   padding-left: 100px;
 }
 
-.axis path,
-.axis line {
+#barChart_p > .axis path,
+#barChart_p > .axis line {
   fill: none;
   display: none;
 }
 
-.label {
+#barChart_p > .label {
   font-size: 13px;
 }
 
@@ -295,4 +300,10 @@ g .tick {
   font: 12px sans-serif;
   padding: 5px;
   text-align: center;
+}
+
+#barChart_p > .value {
+  font-size: 16px;
+  font-weight: 300;
+  fill: #333;
 }
