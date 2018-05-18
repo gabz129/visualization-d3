@@ -8,30 +8,27 @@ const duration = 250;
 
 function renderScatterPlot(countries, minDate, maxDate) {
 
-  var preData = preprocess(losDatos, countries);
-  var processedData = [];
+  var preData = preprocess(rawData, countries, minDate, maxDate);
 
+  var processedData = [];
   for (let index = 0; index < preData.length; index++) {
     const item = preData[index];
-    var countryData = [];
-    var pricePerDate = 0;
-    var sortedItem = item.value.sort((a, b) => a.date.key - b.date.key);
-    for (let index2 = 0; index2 < item.value.length; index2++) {
-      const value = item.value[index2];
-      if (value.date.key > minDate && value.date.key < maxDate) {
-        pricePerDate += value.price;
-        countryData.push({
-          "date": parseDate(value.date.key),
-          "price": pricePerDate / 1000
-        });
-      }
-    };
+
+    yearsToProcess = d3.entries(item.value)
+          .sort((a, b) => { return d3.ascending(a.value.date, b.value.date); })
+          .map(obj => obj.value);
+    processedValues = [];
+    var total = 0
+    for (let year = 0; year < yearsToProcess.length; year++) {
+      const yearPrice = yearsToProcess[year];
+      total += yearPrice.price;
+      processedValues.push({"date": yearPrice.date, "price": total})
+    }
     processedData.push({
       "name": item.key,
-      "values": countryData
+      "values": processedValues
     })
   };
-  console.log(processedData);
   var data = processedData;
 
   var lineOpacity = "0.25";
@@ -49,7 +46,7 @@ function renderScatterPlot(countries, minDate, maxDate) {
   const xScale = setXScale(minDate, maxDate);
   const yScale = setYScale(data);
   const color = d3.scaleOrdinal(d3.schemeCategory10);
-
+  
   /* Add SVG */
   var svg = d3.select("#d3-container").append("svg")
     .attr("width", (width + margin) + "px")
@@ -169,36 +166,44 @@ function renderScatterPlot(countries, minDate, maxDate) {
     .call(yAxis)
     .append('text')
     .attr("y", 15)
-    .attr("transform", "translate(-10)")
+    .attr("transform", "translate(-15)")
     .attr("fill", "#000")
     .text("Km");
 
 };
 
-function preprocess(losDatos, countries) {
+function preprocess(data, countries, minDate, maxDate) {
+  const filteredData = data.filter(item => countries.includes(item.city_country))
+    .filter(item => item.station_opening > minDate && item.station_opening < maxDate);
+
   return d3.nest()
-    .key(function (d) {
-      return d.city_country;
-    })
+    .key(d => { return d.city_country; })
     .rollup((groupByCountry) => {
-      var groupByDate = d3.nest()
-        .key((country) => { return country.station_opening; })
+      //Group by Year
+      const groupByYear = d3.nest()
+        .key(country => { return country.station_opening; })
         .entries(groupByCountry);
-      var lines_meters = 0;
+
       var datePrice = [];
-      for (let index = 0; index < groupByDate.length; index++) {
-        const datePeriod = groupByDate[index];
-        //sort by value descending
-        sortData = d3.entries(datePeriod.values)
+        for (let index = 0; index < groupByYear.length; index++) {
+        var lines_meters = 0;
+        const datePeriod = groupByYear[index].values;
+        const groupByLine = d3.nest()
+        .key( year => {return year.line_id})
+        .entries(datePeriod);
+
+        for (let lineId = 0; lineId < groupByLine.length; lineId++) {
+          const stations = groupByLine[lineId].values;
+          sortData = d3.entries(stations)
           .sort((a, b) => { return d3.descending(a.line_meters_acumulated, b.line_meters_acumulated); })
-        // take the first option 
-        lines_meters += sortData[sortData.length - 1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated;
-        datePrice.push({ "date": datePeriod, "price": lines_meters });
+          lines_meters += sortData[sortData.length - 1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated;
+        }
+        datePrice.push({ "date": parseDate(groupByYear[index].key), "price": lines_meters/1000 });
       }
+      
       return datePrice;
     })
-    .entries(losDatos)
-    .filter(item => countries.includes(item.key));
+    .entries(filteredData)
 }
 
 function setXScale(minDate, maxDate) {
@@ -208,7 +213,8 @@ function setXScale(minDate, maxDate) {
 };
 
 function setYScale(data) {
+  var max = Math.max(...data.map(item => {return Math.max(...item.values.map(it => it.price))}));
   return d3.scaleLinear()
-    .domain([0, d3.max(data[0].values, d => d.price)])
+    .domain([0, max])
     .range([height - margin, 0]);
 }
