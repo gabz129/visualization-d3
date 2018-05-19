@@ -73,7 +73,9 @@ function renderBarChart(startYear, endYear) {
         .attr("width", function(d) { return x(d.value); });
         
     d3.selectAll(".barContainer").data(data).append("text")
-    .attr("y", function (d, i) { return (10 - i) * 40 + (32 - i/2)  })
+    .attr("y", function (d, i) { 
+        return d3.select(this).node().previousElementSibling.getBBox().y + 26;
+    })
     .text(function(d){
         return d.key;
     });
