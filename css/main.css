@@ -280,7 +280,7 @@ body {
 #barChart_p > .axis line {
   fill: none;
   display: none;
-}
+} 
 
 #barChart_p > .label {
   font-size: 13px;

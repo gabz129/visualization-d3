@@ -40,4 +40,4 @@ $(function($) {
   $(window).scroll(navbarCollapse);
 
   init();
-}); // End of use strict
+});

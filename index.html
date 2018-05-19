@@ -18,6 +18,7 @@
     
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/scatterplot.css" rel="stylesheet">
   </head>
 
   <body id="page-top">
@@ -101,7 +102,7 @@
     </section>
 
     <!-- visualization -->
-    <section class="bg-primary" id="visualization">
+    <section id="visualization">
       <div class="container">
         <div class="row">
           <div class="mx-auto text-center">
@@ -109,7 +110,11 @@
             <hr class="light my-4">
           </div>
         </div>
-        <div id="d3-container"></div>
+        <svg id="d3-main-container" height="700" width="1000">
+          <svg id="d3-bartChart-container" height="500" width="250"></svg>
+          <svg id="d3-multilinealChart-container" x="250" y="0" height="500" width="750"></svg>
+          <svg id="d3-timelineChart-container" x="0" y="500" height="200" width="700"></svg>
+        </svg>
       </div>
     </section>
 
@@ -162,12 +167,13 @@
         
         <!-- Plugin JavaScript -->
         <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="js/d3.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
         
         <!-- Custom scripts for this template -->
         <script src="js/main.js"></script>
         <script src="js/index.js"></script>
         <script src="js/barChart.js"></script>
+        <script src="js/scatterplot.js"></script>
   </body>
 
 </html>

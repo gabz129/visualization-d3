@@ -1,16 +1,17 @@
 var countryClass = "flag flag-32 flag-";
+var idx_colour = 0;
 var countryIsoCode = {
-    Argentina: countryClass + "ar",
-    England: countryClass + "england",
-    Portugal: countryClass + "pt",
-    Hungary: countryClass + "hu",
-    Mexico: countryClass + "mx",
-    Chile: countryClass + "cl",
-    Spain: countryClass + "es",
-    France: countryClass + "fr",
-    Japan: countryClass + "jp",
-    Italy: countryClass + "it",
-    China: countryClass + "cn"
+    Argentina: { flag: countryClass + "ar", colour: d3.schemeCategory10[idx_colour++]}, 
+    England: { flag: countryClass + "england", colour: d3.schemeCategory10[idx_colour++]}, 
+    Portugal: { flag: countryClass + "pt", colour: d3.schemeCategory10[idx_colour++]}, 
+    //Hungary: { flag: countryClass + "hu", colour: d3.schemeCategory10[idx_colour++]}, 
+    Mexico: { flag: countryClass + "mx", colour: d3.schemeCategory10[idx_colour++]}, 
+    Chile: { flag: countryClass + "cl", colour: d3.schemeCategory10[idx_colour++]}, 
+    Spain: { flag: countryClass + "es", colour: d3.schemeCategory10[idx_colour++]}, 
+    France: { flag: countryClass + "fr", colour: d3.schemeCategory10[idx_colour++]}, 
+    Japan: { flag: countryClass + "jp", colour: d3.schemeCategory10[idx_colour++]}, 
+    Italy: { flag: countryClass + "it", colour: d3.schemeCategory10[idx_colour++]}, 
+    China: { flag: countryClass + "cn", colour: d3.schemeCategory10[idx_colour++]}
 }
 var rawData = {};
 function processData(raw_data, startYear, endYear) {
@@ -25,7 +26,8 @@ function processData(raw_data, startYear, endYear) {
             var groupByLine = d3.nest()
                 .key(function(d2) { return d2.line_name; })
                 .entries(groupByCountry);
-            var lines_meters = 0;
+            var lines_meters = 0;if ( !startYear ) startYear = 0;
+            if ( !endYear ) endYear = 99999;
             for (let index = 0; index < groupByLine.length; index++) {
                 const line = groupByLine[index];
                 //console.log(line);
@@ -42,9 +44,15 @@ function processData(raw_data, startYear, endYear) {
 
 var losDatos = [];
 
+var countries = [];
+for(var key in countryIsoCode) {
+    countries.push(key);
+}
+
 function init() {
     d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/lines.json").then(function(data) {
         rawData = data;
         renderBarChart();
+        renderScatterPlot(countries);
     });
 }

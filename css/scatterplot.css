@@ -1,0 +1,17 @@
+.line {
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  .axis path {
+    stroke: black;
+  }
+  
+  .text {
+    font-size: 14px;
+  }
+  
+  .title-text {
+    font-size: 25px;
+    font-weight: bold;
+  }

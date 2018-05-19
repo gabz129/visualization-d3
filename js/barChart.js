@@ -28,10 +28,9 @@ function processData(raw_data, startYear, endYear) {
 function renderBarChart(startYear, endYear) {
     data = processData(rawData, startYear, endYear);
 
-    var canvas = d3.select("#d3-container");
-    canvas.selectAll("*").remove();
+    var svg = d3.select("#d3-bartChart-container");
+    svg.selectAll("*").remove();
 
-    var svg = canvas.append("svg").attr("width", 250).attr("height", 500).attr("id", "svg_p");
     var margin = {top: 20, right: 20, bottom: 30, left: 80};
     var width = 250 - margin.left - margin.right;
     var height = 500 - margin.top - margin.bottom;
@@ -62,11 +61,12 @@ function renderBarChart(startYear, endYear) {
             .style("left", d3.event.pageX - 20 + "px")
             .style("top", d3.event.pageY - 40 + "px")
             .style("display", "inline-block")
-            .html((d.key) + "<br>" + (d.value) + " mts" );
+            .html((d.key) + "<br>" + (parseFloat(d.value/1000).toFixed(0)) + " km" );
         })
         .on("mouseout", function(d){ tooltip.style("display", "none");})
         .attr("class", "barContainer").append("rect")
         .attr("class", "bar")
+        .attr("style", (e, i) => "fill:" + countryIsoCode[e.key].colour)
         .attr("x", 0)
         .attr("height", y.bandwidth())
         .attr("y", function(d) { return y(d.key); })
@@ -100,12 +100,13 @@ function renderBarChart(startYear, endYear) {
                 .nodes()
                 .filter(function (e) { return d3.select(e).property('checked') })
                 .map(e => d3.select(e).datum().key);
-            renderTimeLine(countries);
-            renderScatterPlot(countries, startYear, endYear);
+                console.log(" start " + startYear + " , end " + endYear);
+            renderScatterPlot(countries, 1900, 2018);
+            // renderTimeLine(countries);
         });
 
     chkAndFlagsContainer
         .append("image")
-        .attr("class", function(d) { return countryIsoCode[d.key]});
+        .attr("class", function(d) { return countryIsoCode[d.key].flag});
 
 }
