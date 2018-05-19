@@ -1,0 +1,12 @@
+.zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+  }
+  
+  .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+      clip-path: url(#clip);
+  }
