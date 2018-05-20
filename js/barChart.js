@@ -7,20 +7,7 @@ function processData(raw_data, startYear, endYear) {
             return d.city_country;
         })
         .rollup(function(groupByCountry) {
-            var groupByLine = d3.nest()
-                .key(function(d2) { return d2.line_name; })
-                .entries(groupByCountry);
-            var lines_meters = 0;
-            for (let index = 0; index < groupByLine.length; index++) {
-                const line = groupByLine[index];
-                //console.log(line);
-                sortData = d3.entries(line.values)
-                // sort by value descending
-                .sort(function(a, b) { return d3.descending(a.line_meters_acumulated, b.line_meters_acumulated); })
-                // take the first option    
-                lines_meters += sortData[sortData.length -1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated; 
-            }
-            return lines_meters;
+            return d3.sum(groupByCountry, e => e.station_meters);
         })
         .entries(data).sort(function (a, b) {return a.value - b.value});
 }
