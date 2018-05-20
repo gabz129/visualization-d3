@@ -82,18 +82,20 @@ function renderBarChart(startYear, endYear) {
         .attr('type','checkbox')
         .attr('class','chk_barChart_country')
         .attr("checked", true)
-        .on("change", function (d) {
-            var countries = d3.selectAll('.chk_barChart_country')
-                .nodes()
-                .filter(function (e) { return d3.select(e).property('checked') })
-                .map(e => d3.select(e).datum().key);
-                console.log(" start " + startYear + " , end " + endYear);
-                renderScatterPlot(countries, 1900, 2018);
-                renderTimeLine(countries);
-        });
+        .on("change", function (d) {updateSelectedCountries(startYear, endYear)});
 
     chkAndFlagsContainer
         .append("image")
         .attr("class", function(d) { return countryIsoCode[d.key].flag});
 
+        updateSelectedCountries(startYear, endYear);
+}
+
+function updateSelectedCountries(startYear, endYear) {
+    var countries = d3.selectAll('.chk_barChart_country')
+                .nodes()
+                .filter(function (e) { return d3.select(e).property('checked') })
+                .map(e => d3.select(e).datum().key);
+                renderScatterPlot(countries, startYear, endYear);
+                renderTimeLine(countries);
 }
