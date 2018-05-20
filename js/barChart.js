@@ -1,5 +1,5 @@
 function processData(raw_data, startYear, endYear) {
-    if (!startYear) startYear = 1900;
+    if (!startYear) startYear = 1840;
     if (!endYear) endYear = 2018;
     var data = raw_data.filter(function (d) {return d.station_opening >= startYear && d.station_opening <= endYear })
     .filter(item => item.station_meters >= 0);

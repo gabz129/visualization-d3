@@ -14,11 +14,11 @@ function preprocess(data, countries, minDate, maxDate) {
   //Sum meters per year 
   const preData = d3.nest()
     .key(d => { return d.city_country; })
-    .rollup((groupByCountry) => {
+    .rollup(groupByCountry => {
       const groupByYear = d3.nest()
         .key(year => year.station_opening)
-        .rollup(groupPorAno => {
-          return d3.sum(groupPorAno, e => e.station_meters);
+        .rollup(yearData => {
+          return d3.sum(yearData, e => e.station_meters);
         })
         .entries(groupByCountry);
       var yearMeter = [];
@@ -55,7 +55,7 @@ function preprocess(data, countries, minDate, maxDate) {
 }
 
 function renderScatterPlot(countries, minDate, maxDate) {
-  if (!minDate) minDate = 1900;
+  if (!minDate) minDate = 1840;
   if (!maxDate) maxDate = 2018;
 
   const data = preprocess(rawData, countries, minDate, maxDate);
