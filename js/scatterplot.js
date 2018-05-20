@@ -2,71 +2,63 @@
 const parseDate = d3.timeParse("%Y");
 
 const width = 700;
-const height = 450;
+const height = 400;
 const margin = 50;
 const duration = 250;
 
 function preprocess(data, countries, minDate, maxDate) {
   const filteredData = data.filter(item => countries.includes(item.city_country))
-    .filter(item => item.station_opening >= minDate && item.station_opening <= maxDate);
+    .filter(item => item.station_opening >= minDate && item.station_opening <= maxDate)
+    .filter(item => item.station_meters >= 0);
 
-  return d3.nest()
+  //Sum meters per year 
+  const preData = d3.nest()
     .key(d => { return d.city_country; })
-    .rollup((groupByCountry) => {
-      //Group by Year
+    .rollup(groupByCountry => {
       const groupByYear = d3.nest()
-        .key(country => { return country.station_opening; })
+        .key(year => year.station_opening)
+        .rollup(yearData => {
+          return d3.sum(yearData, e => e.station_meters);
+        })
         .entries(groupByCountry);
-
-      var datePrice = [];
-        for (let index = 0; index < groupByYear.length; index++) {
-        var lines_meters = 0;
-        const datePeriod = groupByYear[index].values;
-        const groupByLine = d3.nest()
-          .key(year => { return year.line_id })
-          .entries(datePeriod);
-
-        for (let lineId = 0; lineId < groupByLine.length; lineId++) {
-          const stations = groupByLine[lineId].values;
-          sortData = d3.entries(stations)
-          .sort((a, b) => { return d3.descending(a.line_meters_acumulated, b.line_meters_acumulated); })
-          lines_meters += sortData[sortData.length - 1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated;
-        }
-        datePrice.push({ "date": parseDate(groupByYear[index].key), "price": +parseFloat(lines_meters/1000).toFixed(0) });
-      }
-      
-      return datePrice;
+      var yearMeter = [];
+      return groupByYear.map(item => {
+        return {
+          "year": item.key,
+          "meter": item.value
+        };
+      })
     })
-    .entries(filteredData)
-}
+    .entries(filteredData);
 
-function renderScatterPlot(countries, minDate, maxDate) {
-
-  if ( !minDate ) minDate = 1900;
-    if ( !maxDate ) maxDate = 2018;
-
-  var preData = preprocess(rawData, countries, minDate, maxDate);
-
+  //Fit for better understanding
   var processedData = [];
   for (let index = 0; index < preData.length; index++) {
     const item = preData[index];
 
     yearsToProcess = d3.entries(item.value)
-          .sort((a, b) => { return d3.ascending(a.value.date, b.value.date); })
-          .map(obj => obj.value);
+      .sort((a, b) => { return d3.ascending(a.value.year, b.value.year); })
+      .map(obj => obj.value);
     processedValues = [];
     var total = 0
     for (let year = 0; year < yearsToProcess.length; year++) {
-      const yearPrice = yearsToProcess[year];
-      total += yearPrice.price;
-      processedValues.push({"date": yearPrice.date, "price": total})
+      const yearMeter = yearsToProcess[year];
+      total += yearMeter.meter;
+      processedValues.push({ "year": parseDate(yearMeter.year), "meter": +parseFloat(total / 1000).toFixed(0) })
     }
     processedData.push({
       "name": item.key,
       "values": processedValues
     })
   };
-  var data = processedData;
+  return processedData;
+}
+
+function renderScatterPlot(countries, minDate, maxDate) {
+  if (!minDate) minDate = 1840;
+  if (!maxDate) maxDate = 2018;
+
+  const data = preprocess(rawData, countries, minDate, maxDate);
 
   var lineOpacity = "0.25";
   var lineOpacityHover = "0.85";
@@ -83,27 +75,26 @@ function renderScatterPlot(countries, minDate, maxDate) {
   const xScale = d3.scaleTime()
     .domain([parseDate(minDate), parseDate(maxDate)])
     .range([0, width - margin]);
-  var maxYAxis = Math.max(...data.map(item => { return Math.max(...item.values.map(it => it.price)) }));
+  var maxYAxis = Math.max(...data.map(item => { return Math.max(...item.values.map(it => it.meter)) }));
   const yScale = d3.scaleLinear()
     .domain([0, maxYAxis])
     .range([height - margin, 0]);
   // const color = d3.scaleOrdinal(d3.schemeCategory10);
-  
+
   // Clean
   d3.select("#d3-multilinealChart-container").selectAll("*").remove();
-
   /* Add SVG */
   var svg = d3.select("#d3-multilinealChart-container")
-     .attr("width", (width + margin) + "px")
-     .attr("height", (height + margin) + "px")
+    .attr("width", (width + margin) + "px")
+    .attr("height", (height + margin) + "px")
     .append('g')
-    .attr("transform", `translate(${margin}, ${margin/2})`);
+    .attr("transform", `translate(${margin}, ${margin / 2})`);
 
 
   /* Add line into SVG */
   var line = d3.line()
-    .x(d => xScale(d.date))
-    .y(d => yScale(d.price));
+    .x(d => xScale(d.year))
+    .y(d => yScale(d.meter));
 
   let lines = svg.append('g')
     .attr('class', 'lines');
@@ -167,9 +158,9 @@ function renderScatterPlot(countries, minDate, maxDate) {
         .style("cursor", "pointer")
         .append("text")
         .attr("class", "text")
-        .text(`${d.price}`)
-        .attr("x", d => xScale(d.date) + 5)
-        .attr("y", d => yScale(d.price) - 10);
+        .text(`${d.meter}`)
+        .attr("x", d => xScale(d.year) + 5)
+        .attr("y", d => yScale(d.meter) - 10);
     })
     .on("mouseout", function (d) {
       d3.select(this)
@@ -179,8 +170,8 @@ function renderScatterPlot(countries, minDate, maxDate) {
         .selectAll(".text").remove();
     })
     .append("circle")
-    .attr("cx", d => xScale(d.date))
-    .attr("cy", d => yScale(d.price))
+    .attr("cx", d => xScale(d.year))
+    .attr("cy", d => yScale(d.meter))
     .attr("r", circleRadius)
     .style('opacity', circleOpacity)
     .on("mouseover", function (d) {

@@ -23,6 +23,7 @@ for(var key in countryIsoCode) {
 function init() {
     d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/lines.json").then(function(data) {
         rawData = data;
+        rawData.filter(item => item.station_meters >= 0);
         renderBarChart();
         renderScatterPlot(countries);
         renderTimeLine(countries);
