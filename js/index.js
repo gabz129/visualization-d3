@@ -54,5 +54,6 @@ function init() {
         rawData = data;
         renderBarChart();
         renderScatterPlot(countries);
+        renderTimeLine(countries);
     });
 }

@@ -6,6 +6,40 @@ const height = 450;
 const margin = 50;
 const duration = 250;
 
+function preprocess(data, countries, minDate, maxDate) {
+  const filteredData = data.filter(item => countries.includes(item.city_country))
+    .filter(item => item.station_opening >= minDate && item.station_opening <= maxDate);
+
+  return d3.nest()
+    .key(d => { return d.city_country; })
+    .rollup((groupByCountry) => {
+      //Group by Year
+      const groupByYear = d3.nest()
+        .key(country => { return country.station_opening; })
+        .entries(groupByCountry);
+
+      var datePrice = [];
+        for (let index = 0; index < groupByYear.length; index++) {
+        var lines_meters = 0;
+        const datePeriod = groupByYear[index].values;
+        const groupByLine = d3.nest()
+          .key(year => { return year.line_id })
+          .entries(datePeriod);
+
+        for (let lineId = 0; lineId < groupByLine.length; lineId++) {
+          const stations = groupByLine[lineId].values;
+          sortData = d3.entries(stations)
+          .sort((a, b) => { return d3.descending(a.line_meters_acumulated, b.line_meters_acumulated); })
+          lines_meters += sortData[sortData.length - 1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated;
+        }
+        datePrice.push({ "date": parseDate(groupByYear[index].key), "price": +parseFloat(lines_meters/1000).toFixed(0) });
+      }
+      
+      return datePrice;
+    })
+    .entries(filteredData)
+}
+
 function renderScatterPlot(countries, minDate, maxDate) {
 
   if ( !minDate ) minDate = 1900;
@@ -46,9 +80,14 @@ function renderScatterPlot(countries, minDate, maxDate) {
   var circleRadiusHover = 6;
 
   //Set Axis and line colors
-  const xScale = setXScale(minDate, maxDate);
-  const yScale = setYScale(data);
-  const color = d3.scaleOrdinal(d3.schemeCategory10);
+  const xScale = d3.scaleTime()
+    .domain([parseDate(minDate), parseDate(maxDate)])
+    .range([0, width - margin]);
+  var maxYAxis = Math.max(...data.map(item => { return Math.max(...item.values.map(it => it.price)) }));
+  const yScale = d3.scaleLinear()
+    .domain([0, maxYAxis])
+    .range([height - margin, 0]);
+  // const color = d3.scaleOrdinal(d3.schemeCategory10);
   
   // Clean
   d3.select("#d3-multilinealChart-container").selectAll("*").remove();
@@ -171,56 +210,9 @@ function renderScatterPlot(countries, minDate, maxDate) {
     .attr("class", "y axis")
     .call(yAxis)
     .append('text')
-    .attr("y", 15)
+    .attr("y", 0)
     .attr("transform", "translate(-15)")
     .attr("fill", "#000")
     .text("Km");
 
 };
-
-function preprocess(data, countries, minDate, maxDate) {
-  const filteredData = data.filter(item => countries.includes(item.city_country))
-    .filter(item => item.station_opening >= minDate && item.station_opening <= maxDate);
-
-  return d3.nest()
-    .key(d => { return d.city_country; })
-    .rollup((groupByCountry) => {
-      //Group by Year
-      const groupByYear = d3.nest()
-        .key(country => { return country.station_opening; })
-        .entries(groupByCountry);
-
-      var datePrice = [];
-        for (let index = 0; index < groupByYear.length; index++) {
-        var lines_meters = 0;
-        const datePeriod = groupByYear[index].values;
-        const groupByLine = d3.nest()
-        .key( year => {return year.line_id})
-        .entries(datePeriod);
-
-        for (let lineId = 0; lineId < groupByLine.length; lineId++) {
-          const stations = groupByLine[lineId].values;
-          sortData = d3.entries(stations)
-          .sort((a, b) => { return d3.descending(a.line_meters_acumulated, b.line_meters_acumulated); })
-          lines_meters += sortData[sortData.length - 1].value.line_meters_acumulated - sortData[0].value.line_meters_acumulated;
-        }
-        datePrice.push({ "date": parseDate(groupByYear[index].key), "price": +parseFloat(lines_meters/1000).toFixed(0) });
-      }
-      
-      return datePrice;
-    })
-    .entries(filteredData)
-}
-
-function setXScale(minDate, maxDate) {
-  return d3.scaleTime()
-    .domain([parseDate(minDate), parseDate(maxDate)])
-    .range([0, width - margin]);
-};
-
-function setYScale(data) {
-  var max = Math.max(...data.map(item => {return Math.max(...item.values.map(it => it.price))}));
-  return d3.scaleLinear()
-    .domain([0, max])
-    .range([height - margin, 0]);
-}

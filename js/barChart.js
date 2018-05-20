@@ -101,8 +101,8 @@ function renderBarChart(startYear, endYear) {
                 .filter(function (e) { return d3.select(e).property('checked') })
                 .map(e => d3.select(e).datum().key);
                 console.log(" start " + startYear + " , end " + endYear);
-            renderScatterPlot(countries, 1900, 2018);
-            // renderTimeLine(countries);
+                renderScatterPlot(countries, 1900, 2018);
+                renderTimeLine(countries);
         });
 
     chkAndFlagsContainer
