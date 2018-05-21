@@ -60,7 +60,7 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
         .on("mouseout", function(d){ tooltip.style("display", "none");})
         .attr("class", "barContainer").append("rect")
         .attr("class", "bar")
-        .attr("style", (e, i) => "fill:" + e.value == 0 ? "transparent" : countryIsoCode[e.key].colour)
+        .attr("style", (e, i) => "fill:" + (e.value == 0 ? "transparent" : countryIsoCode[e.key].colour))
         .attr("x", 0)
         .attr("height", y.bandwidth())
         .attr("y", function(d) { return y(d.key); })
