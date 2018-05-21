@@ -10,11 +10,17 @@ function processData(raw_data, startYear, endYear) {
         .rollup(function(groupByCountry) {
             return d3.sum(groupByCountry, e => e.station_meters);
         })
-        .entries(data).sort(function (a, b) {return a.value - b.value});
+        .entries(data);
 }
 
-function renderBarChart(startYear, endYear) {
+function renderBarChart(startYear, endYear, timeLineUpdate) {
     data = processData(rawData, startYear, endYear);
+
+    countries.forEach( country => { 
+        if ( data.filter(e => e.key == country).length == 0 )
+            data.push({key: country, value: 0 });
+    })
+    data = data.sort(function (a, b) {return a.value - b.value})
 
     var svg = d3.select("#d3-bartChart-container");
     svg.selectAll("*").remove();
@@ -54,15 +60,15 @@ function renderBarChart(startYear, endYear) {
         .on("mouseout", function(d){ tooltip.style("display", "none");})
         .attr("class", "barContainer").append("rect")
         .attr("class", "bar")
-        .attr("style", (e, i) => "fill:" + countryIsoCode[e.key].colour)
+        .attr("style", (e, i) => "fill:" + e.value == 0 ? "transparent" : countryIsoCode[e.key].colour)
         .attr("x", 0)
         .attr("height", y.bandwidth())
         .attr("y", function(d) { return y(d.key); })
-        .attr("width", function(d) { return x(d.value); });
+        .attr("width", function(d) { return x(d.value == 0 ? 1 : d.value); });
         
     d3.selectAll(".barContainer").data(data).append("text")
     .attr("y", function (d, i) { 
-        return d3.select(this).node().previousElementSibling.getBBox().y + 26;
+        return d3.select(this).node().previousElementSibling.getBBox().y + d3.select(this).node().previousElementSibling.getBBox().height/2;
     })
     .text(function(d){
         return d.key;
@@ -83,7 +89,7 @@ function renderBarChart(startYear, endYear) {
         .attr('type','checkbox')
         .attr('class','chk_barChart_country')
         .attr("checked", true)
-        .on("change", function (d) {updateSelectedCountries(startYear, endYear)});
+        .on("change", function (d) {updateSelectedCountries(startYear, endYear, timeLineUpdate)});
 
     chkAndFlagsContainer
         .append("image")
@@ -92,11 +98,12 @@ function renderBarChart(startYear, endYear) {
         updateSelectedCountries(startYear, endYear);
 }
 
-function updateSelectedCountries(startYear, endYear) {
+function updateSelectedCountries(startYear, endYear, timeLineUpdate) {
     var countries = d3.selectAll('.chk_barChart_country')
                 .nodes()
                 .filter(function (e) { return d3.select(e).property('checked') })
                 .map(e => d3.select(e).datum().key);
                 renderScatterPlot(countries, startYear, endYear);
-                renderTimeLine(countries);
+                if ( timeLineUpdate )
+                    renderTimeLine(countries);
 }
