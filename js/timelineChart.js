@@ -166,10 +166,10 @@ function renderTimeLine(countries) {
 
 function callRenderBarChart(x2, currentExtent) {
   // x2(new Date(2001, 0, 1))
-  var biginBox = d3.select(".selection").node().getBBox().x;
+  var beginBox = d3.select(".selection").node().getBBox().x;
   var endBox = d3.select(".selection").node().getBBox().width;
-  var tl_startYear = x2.invert(biginBox).getFullYear(),
-  tl_endYear = x2.invert(biginBox + endBox).getFullYear();
+  var tl_startYear = x2.invert(beginBox).getFullYear(),
+  tl_endYear = x2.invert(beginBox + endBox).getFullYear();
   console.log(`event: ${d3.event.type}, startYear: ${tl_startYear}, endYear: ${tl_endYear}`)
  
   renderBarChart(tl_startYear, tl_endYear, false);
