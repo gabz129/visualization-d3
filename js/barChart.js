@@ -12,7 +12,7 @@ function processData(raw_data, startYear, endYear) {
         })
         .entries(data);
 }
-
+var countrySelection = [];
 function renderBarChart(startYear, endYear, timeLineUpdate) {
     data = processData(rawData, startYear, endYear);
 
@@ -21,6 +21,9 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
             data.push({key: country, value: 0 });
     })
     data = data.sort(function (a, b) {return a.value - b.value})
+
+    if ( timeLineUpdate == undefined || timeLineUpdate )
+        countrySelection = data.map(e => e.key);
 
     var svg = d3.select("#d3-bartChart-container");
     svg.selectAll("*").remove();
@@ -89,21 +92,26 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
         .attr('type','checkbox')
         .attr('class','chk_barChart_country')
         .attr("checked", true)
-        .on("change", function (d) {updateSelectedCountries(startYear, endYear, timeLineUpdate)});
+        .on("change", function (d) {updateSelectedCountries(startYear, endYear, true)});
 
     chkAndFlagsContainer
         .append("image")
         .attr("class", function(d) { return countryIsoCode[d.key].flag});
 
+        d3.selectAll('.chk_barChart_country').nodes()
+        .forEach( e => {
+            element = d3.select(e);
+            element.property('checked', countrySelection.includes(element.datum().key));
+        });
         updateSelectedCountries(startYear, endYear);
 }
 
 function updateSelectedCountries(startYear, endYear, timeLineUpdate) {
-    var countries = d3.selectAll('.chk_barChart_country')
+    countrySelection = d3.selectAll('.chk_barChart_country')
                 .nodes()
                 .filter(function (e) { return d3.select(e).property('checked') })
                 .map(e => d3.select(e).datum().key);
-                renderScatterPlot(countries, startYear, endYear);
+                renderScatterPlot(countrySelection, startYear, endYear);
                 if ( timeLineUpdate )
-                    renderTimeLine(countries);
+                    renderTimeLine(countrySelection, false);
 }

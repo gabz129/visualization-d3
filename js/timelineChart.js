@@ -65,38 +65,42 @@ function initializeData(data, countries) {
     .sort(function (a, b) { return d3.ascending(+a.date, +b.date); })
 
   var arrayFinal = [];
+  if ( temp.length > 0 ) {
+    arrayFinal = arrayFinal.concat(temp[0]);
 
-  arrayFinal = arrayFinal.concat(temp[0]);
+    var index = 1;
+    var final = temp[temp.length - 1].date - temp[0].date;
+    while (index < final) {
+      var dateNum = +arrayFinal[index - 1].date;
+      var newDate = dateNum + 1;
+      var pos = temp.map(function (e) { return +e.date; }).indexOf(newDate);
+      var object = {
+        date: 0,
+        meters: 0
+      };
 
-  var index = 1;
-  var final = temp[temp.length - 1].date - temp[0].date;
-  while (index < final) {
-    var dateNum = +arrayFinal[index - 1].date;
-    var newDate = dateNum + 1;
-    var pos = temp.map(function (e) { return +e.date; }).indexOf(newDate);
-    var object = {
-      date: 0,
-      meters: 0
-    };
-
-    object.date = newDate.toString();
-    if (pos == -1) {
-      object.meters = arrayFinal[index - 1].meters;
-    } else {
-      object.meters = arrayFinal[index - 1].meters + temp[pos].meters;
+      object.date = newDate.toString();
+      if (pos == -1) {
+        object.meters = arrayFinal[index - 1].meters;
+      } else {
+        object.meters = arrayFinal[index - 1].meters + temp[pos].meters;
+      }
+      arrayFinal = arrayFinal.concat(object);
+      index++;
     }
-    arrayFinal = arrayFinal.concat(object);
-    index++;
-  }
 
-  // Convertimos el anio a fecha
-  arrayFinal.forEach(function (d, i) {
-    d.date = parseDate(d.date);
-  });
+    // Convertimos el anio a fecha
+    arrayFinal.forEach(function (d, i) {
+      d.date = parseDate(d.date);
+    });
+  }
+  
 
   // ready(arrayFinal);
   return arrayFinal
 }
+
+var dateLinesSelected = [new Date(1900, 0, 1), new Date(1990, 0, 1)];
 
 function renderTimeLine(countries) {
 
@@ -114,7 +118,7 @@ function renderTimeLine(countries) {
   const marginX = 50;
 
   var x2 = d3.scaleTime()
-    .domain(d3.extent(data, d => d.date))
+    .domain([new Date(1840,1,1), new Date(2018, 1, 1)])
     .range([marginX, width]);
   var y2 = d3.scaleLinear().range([height2, 0]);
 
@@ -134,7 +138,6 @@ function renderTimeLine(countries) {
     .on("brush start", updateCurrentExtent)
     .on("brush end", brushed);
 
-  x2.domain(d3.extent(data, function (d) { return d.date; }));
   y2.domain([0, d3.max(data, function (d) { return d.meters; })]);
 
   context.append("path")
@@ -151,7 +154,7 @@ function renderTimeLine(countries) {
     .attr("class", "brush")
     .on("click", brushed)
     .call(brush)
-    .call(brush.move, [new Date(1840, 0, 1), new Date(2018, 0, 1)].map(x2));
+    .call(brush.move, dateLinesSelected.map(x2));
 
 
   function updateCurrentExtent() {
@@ -171,6 +174,8 @@ function callRenderBarChart(x2, currentExtent) {
   var tl_startYear = x2.invert(beginBox).getFullYear(),
   tl_endYear = x2.invert(beginBox + endBox).getFullYear();
   console.log(`event: ${d3.event.type}, startYear: ${tl_startYear}, endYear: ${tl_endYear}`)
- 
+  
+  dateLinesSelected = [new Date(tl_startYear, 1, 1), new Date(tl_endYear, 1, 1)];
+
   renderBarChart(tl_startYear, tl_endYear, false);
 }
