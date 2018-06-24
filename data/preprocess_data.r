@@ -120,11 +120,10 @@ d = dbGetQuery(conn=db,
                order by 2 desc")
 
 
-
 dbSendQuery(conn = db,
             "CREATE TABLE YEARS
             (year INTEGER)")
-
+dbSendQuery(conn=db, "delete from YEARS")
 for ( year in 1840:2018) {
   dbSendQuery(conn = db,
               paste0("INSERT INTO YEARS
@@ -135,20 +134,30 @@ dbGetQuery(conn=db, "select * from YEARS limit 5")
 
 options("digits" = 7)
 
+View(dbGetQuery(conn=db, " select * from underground where station_id = 100"))
+
 data_to_export2 = dbGetQuery(conn=db, "
-           select 
-             u.city_country, 
-             y.year,
-             pbi.pbi,
-             round((select sum(u.station_meters) from underground u2 where u.station_id = u2.station_id) / (station_opening - u.station_buildstart), 2) as meters
-           from YEARS y
-             join underground u on y.year between u.station_buildstart and station_opening
-             join pbi on y.year = pbi.year and pbi.country = u.city_country
-           group by 
-            city_country, 
-            y.year, 
-            pbi.pbi
-           ")
+select 
+ city_country, 
+ y.year, 
+ coalesce( cast(pbi.pbi as number), 0),
+ coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)
+ from YEARS y
+ join pbi on y.year = pbi.year
+ left join underground u on pbi.country = u.city_country and y.year between u.station_buildstart and u.station_opening
+ where pbi.country = 'Chile' and y.year between u.station_buildstart and u.station_opening and  ( u.city_country is null or
+ ( 
+ u.system_name like '%subte%' 
+ or u.system_name like 'underground' 
+ or u.system_name like '%metro%' 
+ or u.system_name like '%sub%' 
+ or u.system_name like 'Métro%')
+ )
+ group by 
+ city_country, 
+ y.year, 
+ pbi.pbi
+ ")
 
 data_to_export = dbGetQuery(conn=db, 
                             "SELECT city_country, line_id, station_id, station_opening, line_name, station_name, station_meters, line_meters, line_meters_acumulated
