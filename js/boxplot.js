@@ -94,11 +94,14 @@ function createBoxplot(boxPlotData, boxplotType) {
     const boxplotId = "#d3-bloxplot-" + boxplotType;
     var showXaxis = false;
     var margin = {};
+    var titleAxisY = "";
     if (boxplotType === "pbi") {
         margin = { top: 20, right: 20, bottom: 5, left: 50 };
+        titleAxisY = "PBI";
     } else {
-        margin = { top: 5, right: 20, bottom: 30, left: 50 };
+        margin = { top: 20, right: 20, bottom: 30, left: 50 };
         showXaxis = true;
+        titleAxisY = "Meters";
     }
 
     // set the dimensions and margins of the graph
@@ -218,5 +221,10 @@ function createBoxplot(boxPlotData, boxplotType) {
 
     // Add the Y Axis
     svg.append("g")
-        .call(d3.axisLeft(yScale));
+        .call(d3.axisLeft(yScale))
+        .append('text')
+        .attr("y", 0)
+        .attr("transform", "translate(-10,-10)")
+        .attr("fill", "#000")
+        .text(titleAxisY);
 }
