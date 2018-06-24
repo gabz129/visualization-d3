@@ -17,7 +17,7 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
     if(timeLineUpdate === false) return;
 
     data = processData(rawData, startYear, endYear);
-
+    
     countries.forEach( country => { 
         if ( data.filter(e => e.key == country).length == 0 )
             data.push({key: country, value: 0 });
@@ -137,10 +137,12 @@ function updateSelectedCountries(startYear, endYear, timeLineUpdate) {
         .filter(function (e) { return d3.select(e).property('checked') })
         .map(e => d3.select(e).datum().key);
     renderScatterPlot(countrySelection, startYear, endYear);
+    renderScatterPlot_pbi(countrySelection[0], startYear, endYear);
     renderBoxplot(countrySelection, startYear, endYear);
     if (timeLineUpdate===true) {
         renderTimeLine(countrySelection, false);
     }
+
 }
 
 var isMultilinePlot = false;
