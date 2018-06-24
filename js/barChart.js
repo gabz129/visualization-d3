@@ -14,6 +14,8 @@ function processData(raw_data, startYear, endYear) {
 }
 var countrySelection = [];
 function renderBarChart(startYear, endYear, timeLineUpdate) {
+    if(timeLineUpdate === false) return;
+
     data = processData(rawData, startYear, endYear);
 
     countries.forEach( country => { 
@@ -77,6 +79,12 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
         return d.key;
     });
 
+    //Multiline chart settings
+    var selectionType = "checkbox";
+    if (isMultilinePlot) {
+        selectionType = "radio";
+    }
+
     var chkAndFlagsContainer = d3.selectAll(".y.axis").selectAll("g")
         .data(data)
         .append("g")
@@ -89,31 +97,55 @@ function renderBarChart(startYear, endYear, timeLineUpdate) {
 
     chkAndFlagsContainer.append("input")
         .attr('style', 'vertical-align: super;')
-        .attr('type','checkbox')
+        .attr('type',selectionType)
+        .attr('name', 'radiobutton')
         .attr('class','chk_barChart_country')
-        .attr("checked", true)
+        .attr("checked", false)
         .on("change", function (d) {updateSelectedCountries(startYear, endYear, true)});
 
     chkAndFlagsContainer
         .append("image")
-        .attr("class", function(d) { return countryIsoCode[d.key].flag});
+        .attr("class", function (d) { return countryIsoCode[d.key].flag });
 
+    if (isMultilinePlot && countrySelection.length > 1) {
         d3.selectAll('.chk_barChart_country').nodes()
-        .forEach( e => {
-            element = d3.select(e);
-            element.property('checked', countrySelection.includes(element.datum().key));
-        });
-        updateSelectedCountries(startYear, endYear);
+            .forEach(e => {
+                element = d3.select(e);
+                element.property('checked', false);
+            });
+        //Set Default
+        d3.select('.chk_barChart_country')
+            .nodes()
+            .forEach(e => {
+                element = d3.select(e);
+                element.property('checked', true);
+            });
+    } else {
+        d3.selectAll('.chk_barChart_country').nodes()
+            .forEach(e => {
+                element = d3.select(e);
+                element.property('checked', countrySelection.includes(element.datum().key));
+            });
+    }
+
+    updateSelectedCountries(startYear, endYear);
 }
 
 function updateSelectedCountries(startYear, endYear, timeLineUpdate) {
     countrySelection = d3.selectAll('.chk_barChart_country')
-                .nodes()
-                .filter(function (e) { return d3.select(e).property('checked') })
-                .map(e => d3.select(e).datum().key);
-                renderScatterPlot(countrySelection, startYear, endYear);
-                renderBoxplot(countrySelection, startYear, endYear);
-                if ( timeLineUpdate ){
-                    renderTimeLine(countrySelection, false);
-                }
+        .nodes()
+        .filter(function (e) { return d3.select(e).property('checked') })
+        .map(e => d3.select(e).datum().key);
+    renderScatterPlot(countrySelection, startYear, endYear);
+    renderBoxplot(countrySelection, startYear, endYear);
+    if (timeLineUpdate===true) {
+        renderTimeLine(countrySelection, false);
+    }
 }
+
+var isMultilinePlot = false;
+$('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+    activeTabTarget = $(e.target).attr("href") // activated tab
+    isMultilinePlot = activeTabTarget === "#pills-contact";
+    renderBarChart(1960, 2018, true);
+  });
