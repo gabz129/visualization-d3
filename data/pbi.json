@@ -1,242 +1,242 @@
 [
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1969,
-    "coalesce( cast(pbi.pbi as number), 0)": 893.2476,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1242.5
+    "pbi": 893.2476,
+    "meters": 1242.5
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1970,
-    "coalesce( cast(pbi.pbi as number), 0)": 954.2491,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1242.5
+    "pbi": 954.2491,
+    "meters": 1242.5
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1971,
-    "coalesce( cast(pbi.pbi as number), 0)": 1116.8706,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1739
+    "pbi": 1116.8706,
+    "meters": 1739
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1972,
-    "coalesce( cast(pbi.pbi as number), 0)": 1194.6332,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1739
+    "pbi": 1194.6332,
+    "meters": 1739
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1973,
-    "coalesce( cast(pbi.pbi as number), 0)": 1667.5683,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 3612
+    "pbi": 1667.5683,
+    "meters": 3612
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1974,
-    "coalesce( cast(pbi.pbi as number), 0)": 1578.8756,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 4356.8333
+    "pbi": 1578.8756,
+    "meters": 4356.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1975,
-    "coalesce( cast(pbi.pbi as number), 0)": 730.4099,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 4356.8333
+    "pbi": 730.4099,
+    "meters": 4356.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1976,
-    "coalesce( cast(pbi.pbi as number), 0)": 975.4844,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 3114.3333
+    "pbi": 975.4844,
+    "meters": 3114.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1977,
-    "coalesce( cast(pbi.pbi as number), 0)": 1296.893,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 3114.3333
+    "pbi": 1296.893,
+    "meters": 3114.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1978,
-    "coalesce( cast(pbi.pbi as number), 0)": 1462.8352,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 2617.8333
+    "pbi": 1462.8352,
+    "meters": 2617.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1979,
-    "coalesce( cast(pbi.pbi as number), 0)": 1964.8514,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 744.8333
+    "pbi": 1964.8514,
+    "meters": 744.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1980,
-    "coalesce( cast(pbi.pbi as number), 0)": 2577.3236,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 744.8333
+    "pbi": 2577.3236,
+    "meters": 744.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1984,
-    "coalesce( cast(pbi.pbi as number), 0)": 1637.1673,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 574
+    "pbi": 1637.1673,
+    "meters": 574
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1985,
-    "coalesce( cast(pbi.pbi as number), 0)": 1453.3162,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 574
+    "pbi": 1453.3162,
+    "meters": 574
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1986,
-    "coalesce( cast(pbi.pbi as number), 0)": 1525.4267,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 574
+    "pbi": 1525.4267,
+    "meters": 574
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1987,
-    "coalesce( cast(pbi.pbi as number), 0)": 1767.1233,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 574
+    "pbi": 1767.1233,
+    "meters": 574
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1994,
-    "coalesce( cast(pbi.pbi as number), 0)": 4045.6214,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 28029
+    "pbi": 4045.6214,
+    "meters": 28029
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1995,
-    "coalesce( cast(pbi.pbi as number), 0)": 5137.3751,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 28029
+    "pbi": 5137.3751,
+    "meters": 28029
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1996,
-    "coalesce( cast(pbi.pbi as number), 0)": 5382.8465,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 28029
+    "pbi": 5382.8465,
+    "meters": 28029
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1997,
-    "coalesce( cast(pbi.pbi as number), 0)": 5781.1034,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 29941.3333
+    "pbi": 5781.1034,
+    "meters": 29941.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1998,
-    "coalesce( cast(pbi.pbi as number), 0)": 5479.4981,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1912.3333
+    "pbi": 5479.4981,
+    "meters": 1912.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 1999,
-    "coalesce( cast(pbi.pbi as number), 0)": 4986.0074,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1912.3333
+    "pbi": 4986.0074,
+    "meters": 1912.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2000,
-    "coalesce( cast(pbi.pbi as number), 0)": 5101.3685,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 3744.0833
+    "pbi": 5101.3685,
+    "meters": 3744.0833
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2001,
-    "coalesce( cast(pbi.pbi as number), 0)": 4595.6663,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 1831.75
+    "pbi": 4595.6663,
+    "meters": 1831.75
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2002,
-    "coalesce( cast(pbi.pbi as number), 0)": 4463.5459,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 10549.6667
+    "pbi": 4463.5459,
+    "meters": 10549.6667
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2003,
-    "coalesce( cast(pbi.pbi as number), 0)": 4787.6995,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 12556.3333
+    "pbi": 4787.6995,
+    "meters": 12556.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2004,
-    "coalesce( cast(pbi.pbi as number), 0)": 6210.8283,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 12556.3333
+    "pbi": 6210.8283,
+    "meters": 12556.3333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2005,
-    "coalesce( cast(pbi.pbi as number), 0)": 7615.3047,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 27591.8167
+    "pbi": 7615.3047,
+    "meters": 27591.8167
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2006,
-    "coalesce( cast(pbi.pbi as number), 0)": 9484.6812,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 21352.15
+    "pbi": 9484.6812,
+    "meters": 21352.15
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2007,
-    "coalesce( cast(pbi.pbi as number), 0)": 10526.8775,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 18545.9
+    "pbi": 10526.8775,
+    "meters": 18545.9
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2008,
-    "coalesce( cast(pbi.pbi as number), 0)": 10781.3661,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 18545.9
+    "pbi": 10781.3661,
+    "meters": 18545.9
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2009,
-    "coalesce( cast(pbi.pbi as number), 0)": 10243.3282,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 18545.9
+    "pbi": 10243.3282,
+    "meters": 18545.9
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2010,
-    "coalesce( cast(pbi.pbi as number), 0)": 12860.1776,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 18136.9
+    "pbi": 12860.1776,
+    "meters": 18136.9
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2011,
-    "coalesce( cast(pbi.pbi as number), 0)": 14705.6924,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 12336.8333
+    "pbi": 14705.6924,
+    "meters": 12336.8333
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2012,
-    "coalesce( cast(pbi.pbi as number), 0)": 15431.9029,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 6325.3524
+    "pbi": 15431.9029,
+    "meters": 6325.3524
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2013,
-    "coalesce( cast(pbi.pbi as number), 0)": 15941.3972,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 6325.3524
+    "pbi": 15941.3972,
+    "meters": 6325.3524
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2014,
-    "coalesce( cast(pbi.pbi as number), 0)": 14817.3778,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 6325.3524
+    "pbi": 14817.3778,
+    "meters": 6325.3524
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2015,
-    "coalesce( cast(pbi.pbi as number), 0)": 13653.2264,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 6325.3524
+    "pbi": 13653.2264,
+    "meters": 6325.3524
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2016,
-    "coalesce( cast(pbi.pbi as number), 0)": 13792.9261,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 6325.3524
+    "pbi": 13792.9261,
+    "meters": 6325.3524
   },
   {
-    "city_country": "Chile",
+    "country": "Chile",
     "year": 2017,
-    "coalesce( cast(pbi.pbi as number), 0)": 0,
-    "coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0)": 8282.3524
+    "pbi": 0,
+    "meters": 8282.3524
   }
 ]
