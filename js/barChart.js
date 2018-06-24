@@ -112,6 +112,8 @@ function updateSelectedCountries(startYear, endYear, timeLineUpdate) {
                 .filter(function (e) { return d3.select(e).property('checked') })
                 .map(e => d3.select(e).datum().key);
                 renderScatterPlot(countrySelection, startYear, endYear);
-                if ( timeLineUpdate )
+                renderBoxplot(countrySelection, startYear, endYear);
+                if ( timeLineUpdate ){
                     renderTimeLine(countrySelection, false);
+                }
 }

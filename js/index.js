@@ -14,6 +14,7 @@ var countryIsoCode = {
     China: { flag: countryClass + "cn", colour: d3.schemeCategory10[idx_colour++]}
 }
 var rawData = {};
+var pbiRawData = {};
 
 var countries = [];
 for(var key in countryIsoCode) {
@@ -22,10 +23,13 @@ for(var key in countryIsoCode) {
 
 function init() {
     d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/lines.json").then(function(data) {
-        rawData = data;
-        rawData.filter(item => item.station_meters >= 0);
-        renderBarChart();
-        renderScatterPlot(countries);
-        renderTimeLine(countries);
+        d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/pbi.json").then(function (dataPbi) {
+            rawData = data;
+            rawData.filter(item => item.station_meters >= 0);
+            pbiRawData = dataPbi;
+            //Render plots
+            renderBarChart();
+            renderTimeLine(countries);
+        });
     });
 }
