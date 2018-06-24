@@ -62,7 +62,7 @@ function metersBoxplot(filteredData) {
         }
         if (item.meters != undefined) {
             let meters = parseFloat(item.meters);
-            groupCounts[item.city_country].push(meters);
+            groupCounts[item.city_country].push(meters/1000);
         }
     }, Object.create(null));
 
@@ -97,11 +97,11 @@ function createBoxplot(boxPlotData, boxplotType) {
     var titleAxisY = "";
     if (boxplotType === "pbi") {
         margin = { top: 20, right: 20, bottom: 5, left: 50 };
-        titleAxisY = "PBI";
+        titleAxisY = "GDP $";
     } else {
         margin = { top: 20, right: 20, bottom: 30, left: 50 };
         showXaxis = true;
-        titleAxisY = "Meters";
+        titleAxisY = "Km";
     }
 
     // set the dimensions and margins of the graph
