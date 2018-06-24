@@ -138,7 +138,7 @@ View(dbGetQuery(conn=db, " select * from underground where station_id = 100"))
 
 data_to_export2 = dbGetQuery(conn=db, "
 select 
- city_country country, 
+ city_country city_country, 
  y.year year, 
  coalesce( cast(pbi.pbi as number), 0) pbi,
  coalesce(sum(u.station_meters/ (u.station_opening - u.station_buildstart) ), 0) meters

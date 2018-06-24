@@ -1,240 +1,240 @@
 [
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1969,
     "pbi": 893.2476,
     "meters": 1242.5
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1970,
     "pbi": 954.2491,
     "meters": 1242.5
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1971,
     "pbi": 1116.8706,
     "meters": 1739
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1972,
     "pbi": 1194.6332,
     "meters": 1739
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1973,
     "pbi": 1667.5683,
     "meters": 3612
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1974,
     "pbi": 1578.8756,
     "meters": 4356.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1975,
     "pbi": 730.4099,
     "meters": 4356.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1976,
     "pbi": 975.4844,
     "meters": 3114.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1977,
     "pbi": 1296.893,
     "meters": 3114.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1978,
     "pbi": 1462.8352,
     "meters": 2617.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1979,
     "pbi": 1964.8514,
     "meters": 744.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1980,
     "pbi": 2577.3236,
     "meters": 744.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1984,
     "pbi": 1637.1673,
     "meters": 574
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1985,
     "pbi": 1453.3162,
     "meters": 574
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1986,
     "pbi": 1525.4267,
     "meters": 574
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1987,
     "pbi": 1767.1233,
     "meters": 574
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1994,
     "pbi": 4045.6214,
     "meters": 28029
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1995,
     "pbi": 5137.3751,
     "meters": 28029
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1996,
     "pbi": 5382.8465,
     "meters": 28029
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1997,
     "pbi": 5781.1034,
     "meters": 29941.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1998,
     "pbi": 5479.4981,
     "meters": 1912.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 1999,
     "pbi": 4986.0074,
     "meters": 1912.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2000,
     "pbi": 5101.3685,
     "meters": 3744.0833
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2001,
     "pbi": 4595.6663,
     "meters": 1831.75
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2002,
     "pbi": 4463.5459,
     "meters": 10549.6667
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2003,
     "pbi": 4787.6995,
     "meters": 12556.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2004,
     "pbi": 6210.8283,
     "meters": 12556.3333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2005,
     "pbi": 7615.3047,
     "meters": 27591.8167
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2006,
     "pbi": 9484.6812,
     "meters": 21352.15
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2007,
     "pbi": 10526.8775,
     "meters": 18545.9
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2008,
     "pbi": 10781.3661,
     "meters": 18545.9
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2009,
     "pbi": 10243.3282,
     "meters": 18545.9
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2010,
     "pbi": 12860.1776,
     "meters": 18136.9
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2011,
     "pbi": 14705.6924,
     "meters": 12336.8333
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2012,
     "pbi": 15431.9029,
     "meters": 6325.3524
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2013,
     "pbi": 15941.3972,
     "meters": 6325.3524
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2014,
     "pbi": 14817.3778,
     "meters": 6325.3524
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2015,
     "pbi": 13653.2264,
     "meters": 6325.3524
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2016,
     "pbi": 13792.9261,
     "meters": 6325.3524
   },
   {
-    "country": "Chile",
+    "city_country": "Chile",
     "year": 2017,
     "pbi": 0,
     "meters": 8282.3524
