@@ -146,13 +146,8 @@ data_to_export2 = dbGetQuery(conn=db, "
              join pbi on y.year = pbi.year and pbi.country = u.city_country
            group by 
             city_country, 
-            u.line_id, 
-            u.station_id, 
-            u.station_opening, 
-            u.line_name, 
-            u.station_name, 
-            u.line_meters,
-            u.station_meters
+            y.year, 
+            pbi.pbi
            ")
 
 data_to_export = dbGetQuery(conn=db, 
