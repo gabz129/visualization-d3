@@ -7,7 +7,7 @@ function renderScatterPlot_pbi(country, minDate, maxDate) {
   var filteredData = pbiRawData.filter(item => country == item.city_country )
   .filter(item => item.year >= minDate && item.year <= maxDate);
 
-  var data = filteredData.map( e => { return {year: parseDate(e.year), pbi: e.pbi/THOUSANDS, meters: e.meters }} );
+  var data = filteredData.map( e => { return {year: parseDate(e.year), pbi: e.pbi/THOUSANDS, meters: e.meters/1000 }} );
 
   var svg = d3.select("#d3-multilineChart-2-container");
   svg.selectAll("*").remove();
