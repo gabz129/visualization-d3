@@ -1,5 +1,311 @@
 [
   {
+    "city_country": "Argentina",
+    "year": 1960,
+    "pbi": 0,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1961,
+    "pbi": 0,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1962,
+    "pbi": 1148.58,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1963,
+    "pbi": 845.0772,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1964,
+    "pbi": 1166.3174,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1965,
+    "pbi": 1272.0105,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1966,
+    "pbi": 1266.345,
+    "meters": 303.6667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1969,
+    "pbi": 1324.0829,
+    "meters": 163.25
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1970,
+    "pbi": 1317.4878,
+    "meters": 163.25
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1971,
+    "pbi": 1366.3547,
+    "meters": 163.25
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1972,
+    "pbi": 1401.4878,
+    "meters": 163.25
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1973,
+    "pbi": 2083.9722,
+    "meters": 163.25
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1977,
+    "pbi": 2112.5012,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1978,
+    "pbi": 2129.3138,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1979,
+    "pbi": 2501.4808,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1980,
+    "pbi": 2738.2847,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1981,
+    "pbi": 2756.397,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1982,
+    "pbi": 2907.7576,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1983,
+    "pbi": 3530.1318,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1984,
+    "pbi": 2643.3694,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1985,
+    "pbi": 2909.5166,
+    "meters": 378.3889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1986,
+    "pbi": 3595.0859,
+    "meters": 53.8889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1988,
+    "pbi": 3969.3274,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1989,
+    "pbi": 2375.3391,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1990,
+    "pbi": 4318.7747,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1991,
+    "pbi": 5715.5044,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1992,
+    "pbi": 6798.0268,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1993,
+    "pbi": 6940.3504,
+    "meters": 185.8
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1994,
+    "pbi": 7449.4804,
+    "meters": 887.0333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1995,
+    "pbi": 7373.4282,
+    "meters": 887.0333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1996,
+    "pbi": 7683.5741,
+    "meters": 887.0333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1997,
+    "pbi": 8172.6643,
+    "meters": 887.0333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1998,
+    "pbi": 8248.762,
+    "meters": 267.3667
+  },
+  {
+    "city_country": "Argentina",
+    "year": 1999,
+    "pbi": 7736.3696,
+    "meters": 739.1167
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2000,
+    "pbi": 7669.2739,
+    "meters": 620.9167
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2001,
+    "pbi": 7170.6947,
+    "meters": 1096.4167
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2002,
+    "pbi": 2579.1932,
+    "meters": 1096.4167
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2003,
+    "pbi": 3330.437,
+    "meters": 1096.4167
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2004,
+    "pbi": 4251.5743,
+    "meters": 1170.8056
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2005,
+    "pbi": 5076.8838,
+    "meters": 1455.6389
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2006,
+    "pbi": 5878.761,
+    "meters": 1590.8889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2007,
+    "pbi": 7193.6176,
+    "meters": 1590.8889
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2008,
+    "pbi": 8953.3593,
+    "meters": 966.2222
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2009,
+    "pbi": 8161.307,
+    "meters": 569.9722
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2010,
+    "pbi": 10276.2605,
+    "meters": 569.9722
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2011,
+    "pbi": 12726.9084,
+    "meters": 434.7222
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2012,
+    "pbi": 12969.7071,
+    "meters": 945.2222
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2013,
+    "pbi": 12976.6364,
+    "meters": 945.2222
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2014,
+    "pbi": 12245.2564,
+    "meters": 624.3333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2015,
+    "pbi": 13467.1024,
+    "meters": 624.3333
+  },
+  {
+    "city_country": "Argentina",
+    "year": 2016,
+    "pbi": 12440.321,
+    "meters": 124
+  },
+  {
     "city_country": "Chile",
     "year": 1969,
     "pbi": 893.2476,
@@ -238,5 +544,1913 @@
     "year": 2017,
     "pbi": 0,
     "meters": 8282.3524
+  },
+  {
+    "city_country": "China",
+    "year": 1960,
+    "pbi": 89.5205,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1961,
+    "pbi": 75.8058,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1962,
+    "pbi": 70.9094,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1963,
+    "pbi": 74.3136,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1964,
+    "pbi": 85.4986,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1965,
+    "pbi": 98.4868,
+    "meters": 4006.6329
+  },
+  {
+    "city_country": "China",
+    "year": 1966,
+    "pbi": 104.3246,
+    "meters": 4006.6329
+  },
+  {
+    "city_country": "China",
+    "year": 1967,
+    "pbi": 96.5895,
+    "meters": 4006.6329
+  },
+  {
+    "city_country": "China",
+    "year": 1968,
+    "pbi": 91.4727,
+    "meters": 4006.6329
+  },
+  {
+    "city_country": "China",
+    "year": 1969,
+    "pbi": 100.1299,
+    "meters": 4006.6329
+  },
+  {
+    "city_country": "China",
+    "year": 1970,
+    "pbi": 113.163,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1971,
+    "pbi": 118.6546,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1972,
+    "pbi": 131.8836,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1973,
+    "pbi": 157.0904,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1974,
+    "pbi": 160.1401,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1975,
+    "pbi": 178.3418,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1976,
+    "pbi": 165.4055,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1977,
+    "pbi": 185.4228,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1978,
+    "pbi": 156.3964,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1979,
+    "pbi": 183.9832,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1980,
+    "pbi": 194.8047,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1981,
+    "pbi": 197.0715,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1982,
+    "pbi": 203.3349,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1983,
+    "pbi": 225.4319,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1984,
+    "pbi": 250.714,
+    "meters": 157.2291
+  },
+  {
+    "city_country": "China",
+    "year": 1985,
+    "pbi": 294.4588,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1986,
+    "pbi": 281.9281,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1987,
+    "pbi": 251.812,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1988,
+    "pbi": 283.5377,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1989,
+    "pbi": 310.8819,
+    "meters": 18.3829
+  },
+  {
+    "city_country": "China",
+    "year": 1990,
+    "pbi": 317.8847,
+    "meters": 4486.7829
+  },
+  {
+    "city_country": "China",
+    "year": 1991,
+    "pbi": 333.1421,
+    "meters": 4486.7829
+  },
+  {
+    "city_country": "China",
+    "year": 1992,
+    "pbi": 366.4607,
+    "meters": 4486.7829
+  },
+  {
+    "city_country": "China",
+    "year": 1993,
+    "pbi": 377.3898,
+    "meters": 5443.4496
+  },
+  {
+    "city_country": "China",
+    "year": 1994,
+    "pbi": 473.4923,
+    "meters": 2778.4496
+  },
+  {
+    "city_country": "China",
+    "year": 1995,
+    "pbi": 609.6567,
+    "meters": 7510.2496
+  },
+  {
+    "city_country": "China",
+    "year": 1996,
+    "pbi": 709.4138,
+    "meters": 5706.8496
+  },
+  {
+    "city_country": "China",
+    "year": 1997,
+    "pbi": 781.7442,
+    "meters": 16277.9607
+  },
+  {
+    "city_country": "China",
+    "year": 1998,
+    "pbi": 828.5805,
+    "meters": 16277.9607
+  },
+  {
+    "city_country": "China",
+    "year": 1999,
+    "pbi": 873.2871,
+    "meters": 16277.9607
+  },
+  {
+    "city_country": "China",
+    "year": 2000,
+    "pbi": 959.3725,
+    "meters": 12089.9607
+  },
+  {
+    "city_country": "China",
+    "year": 2001,
+    "pbi": 1053.1082,
+    "meters": 10759.369
+  },
+  {
+    "city_country": "China",
+    "year": 2002,
+    "pbi": 1148.5083,
+    "meters": 28902.4135
+  },
+  {
+    "city_country": "China",
+    "year": 2003,
+    "pbi": 1288.6433,
+    "meters": 57779.7801
+  },
+  {
+    "city_country": "China",
+    "year": 2004,
+    "pbi": 1508.6681,
+    "meters": 57779.7801
+  },
+  {
+    "city_country": "China",
+    "year": 2005,
+    "pbi": 1753.4178,
+    "meters": 96740.3099
+  },
+  {
+    "city_country": "China",
+    "year": 2006,
+    "pbi": 2099.2294,
+    "meters": 98941.5599
+  },
+  {
+    "city_country": "China",
+    "year": 2007,
+    "pbi": 2695.3659,
+    "meters": 182947.7653
+  },
+  {
+    "city_country": "China",
+    "year": 2008,
+    "pbi": 3471.2481,
+    "meters": 196888.4814
+  },
+  {
+    "city_country": "China",
+    "year": 2009,
+    "pbi": 3838.434,
+    "meters": 204693.6814
+  },
+  {
+    "city_country": "China",
+    "year": 2010,
+    "pbi": 4560.5126,
+    "meters": 182060.0341
+  },
+  {
+    "city_country": "China",
+    "year": 2011,
+    "pbi": 5633.7957,
+    "meters": 119191.4675
+  },
+  {
+    "city_country": "China",
+    "year": 2012,
+    "pbi": 6337.8833,
+    "meters": 125250.3563
+  },
+  {
+    "city_country": "China",
+    "year": 2013,
+    "pbi": 7077.7708,
+    "meters": 117760.573
+  },
+  {
+    "city_country": "China",
+    "year": 2014,
+    "pbi": 7683.5026,
+    "meters": 83363.5563
+  },
+  {
+    "city_country": "China",
+    "year": 2015,
+    "pbi": 8069.213,
+    "meters": 70976.2397
+  },
+  {
+    "city_country": "China",
+    "year": 2016,
+    "pbi": 8123.1809,
+    "meters": 62876.0778
+  },
+  {
+    "city_country": "China",
+    "year": 2017,
+    "pbi": 0,
+    "meters": 49729.0778
+  },
+  {
+    "city_country": "England",
+    "year": 1974,
+    "pbi": 3665.8628,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1975,
+    "pbi": 4299.7456,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1976,
+    "pbi": 4138.1678,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1977,
+    "pbi": 4681.4399,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1978,
+    "pbi": 5976.9382,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1979,
+    "pbi": 7804.7621,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1980,
+    "pbi": 10032.0621,
+    "meters": 1475.5
+  },
+  {
+    "city_country": "England",
+    "year": 1981,
+    "pbi": 9599.3062,
+    "meters": 0
+  },
+  {
+    "city_country": "England",
+    "year": 1985,
+    "pbi": 8652.2165,
+    "meters": 0
+  },
+  {
+    "city_country": "England",
+    "year": 1986,
+    "pbi": 10611.1122,
+    "meters": 0
+  },
+  {
+    "city_country": "England",
+    "year": 1991,
+    "pbi": 19900.7267,
+    "meters": 0
+  },
+  {
+    "city_country": "England",
+    "year": 1999,
+    "pbi": 28383.6689,
+    "meters": 2259
+  },
+  {
+    "city_country": "England",
+    "year": 2000,
+    "pbi": 27982.3558,
+    "meters": 2259
+  },
+  {
+    "city_country": "England",
+    "year": 2001,
+    "pbi": 27427.5875,
+    "meters": 2259
+  },
+  {
+    "city_country": "England",
+    "year": 2002,
+    "pbi": 29785.9863,
+    "meters": 2259
+  },
+  {
+    "city_country": "France",
+    "year": 1960,
+    "pbi": 1338.2996,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1961,
+    "pbi": 1440.5543,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1962,
+    "pbi": 1585.9173,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1963,
+    "pbi": 1752.9644,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1964,
+    "pbi": 1919.2667,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1965,
+    "pbi": 2042.2404,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1966,
+    "pbi": 2189.6709,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1967,
+    "pbi": 2346.363,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1968,
+    "pbi": 2532.3147,
+    "meters": 0.3823
+  },
+  {
+    "city_country": "France",
+    "year": 1969,
+    "pbi": 2725.2176,
+    "meters": 68.1601
+  },
+  {
+    "city_country": "France",
+    "year": 1970,
+    "pbi": 2862.4693,
+    "meters": 68.1601
+  },
+  {
+    "city_country": "France",
+    "year": 1971,
+    "pbi": 3173.84,
+    "meters": 68.1601
+  },
+  {
+    "city_country": "France",
+    "year": 1972,
+    "pbi": 3857.3728,
+    "meters": 68.1601
+  },
+  {
+    "city_country": "France",
+    "year": 1973,
+    "pbi": 4965.8548,
+    "meters": 2408.1601
+  },
+  {
+    "city_country": "France",
+    "year": 1974,
+    "pbi": 5317.6195,
+    "meters": 2527.9101
+  },
+  {
+    "city_country": "France",
+    "year": 1975,
+    "pbi": 6672.5114,
+    "meters": 2527.9101
+  },
+  {
+    "city_country": "France",
+    "year": 1976,
+    "pbi": 6846.3522,
+    "meters": 2527.5278
+  },
+  {
+    "city_country": "France",
+    "year": 1977,
+    "pbi": 7513.345,
+    "meters": 2527.5278
+  },
+  {
+    "city_country": "France",
+    "year": 1978,
+    "pbi": 9248.4416,
+    "meters": 187.5278
+  },
+  {
+    "city_country": "France",
+    "year": 1982,
+    "pbi": 10505.7355,
+    "meters": 0
+  },
+  {
+    "city_country": "France",
+    "year": 1989,
+    "pbi": 17704.959,
+    "meters": 0
+  },
+  {
+    "city_country": "France",
+    "year": 1993,
+    "pbi": 22503.2601,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 1994,
+    "pbi": 23625.5298,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 1995,
+    "pbi": 27037.9726,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 1996,
+    "pbi": 27015.2581,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 1997,
+    "pbi": 24359.4226,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 1998,
+    "pbi": 25101.37,
+    "meters": 165.4
+  },
+  {
+    "city_country": "France",
+    "year": 2001,
+    "pbi": 22527.3181,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2002,
+    "pbi": 24275.2426,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2003,
+    "pbi": 29691.1806,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2004,
+    "pbi": 33874.7436,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2005,
+    "pbi": 34879.7291,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2006,
+    "pbi": 36544.5057,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2007,
+    "pbi": 41600.5853,
+    "meters": 138.6667
+  },
+  {
+    "city_country": "France",
+    "year": 2008,
+    "pbi": 45413.0664,
+    "meters": 273
+  },
+  {
+    "city_country": "France",
+    "year": 2009,
+    "pbi": 41631.1314,
+    "meters": 273
+  },
+  {
+    "city_country": "France",
+    "year": 2010,
+    "pbi": 40703.3459,
+    "meters": 273
+  },
+  {
+    "city_country": "France",
+    "year": 2011,
+    "pbi": 43810.2016,
+    "meters": 273
+  },
+  {
+    "city_country": "France",
+    "year": 2012,
+    "pbi": 40838.0251,
+    "meters": 273
+  },
+  {
+    "city_country": "France",
+    "year": 2014,
+    "pbi": 42955.2419,
+    "meters": 869.6
+  },
+  {
+    "city_country": "France",
+    "year": 2015,
+    "pbi": 36526.7701,
+    "meters": 1442.15
+  },
+  {
+    "city_country": "France",
+    "year": 2016,
+    "pbi": 36857.1192,
+    "meters": 2062.15
+  },
+  {
+    "city_country": "France",
+    "year": 2017,
+    "pbi": 0,
+    "meters": 2248.8167
+  },
+  {
+    "city_country": "Italy",
+    "year": 1960,
+    "pbi": 804.4926,
+    "meters": 14138.1153
+  },
+  {
+    "city_country": "Italy",
+    "year": 1961,
+    "pbi": 887.3367,
+    "meters": 14138.1153
+  },
+  {
+    "city_country": "Italy",
+    "year": 1962,
+    "pbi": 990.2602,
+    "meters": 15965.6153
+  },
+  {
+    "city_country": "Italy",
+    "year": 1963,
+    "pbi": 1126.0193,
+    "meters": 15965.6153
+  },
+  {
+    "city_country": "Italy",
+    "year": 1964,
+    "pbi": 1222.5445,
+    "meters": 16585.9278
+  },
+  {
+    "city_country": "Italy",
+    "year": 1965,
+    "pbi": 1304.4538,
+    "meters": 5827.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1966,
+    "pbi": 1402.4424,
+    "meters": 6219.6659
+  },
+  {
+    "city_country": "Italy",
+    "year": 1967,
+    "pbi": 1533.6929,
+    "meters": 5515.1659
+  },
+  {
+    "city_country": "Italy",
+    "year": 1968,
+    "pbi": 1651.9394,
+    "meters": 5515.1659
+  },
+  {
+    "city_country": "Italy",
+    "year": 1969,
+    "pbi": 1813.3881,
+    "meters": 5515.1659
+  },
+  {
+    "city_country": "Italy",
+    "year": 1970,
+    "pbi": 2099.9143,
+    "meters": 1887.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1971,
+    "pbi": 2298.0045,
+    "meters": 1756.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1972,
+    "pbi": 2662.3264,
+    "meters": 633.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1973,
+    "pbi": 3194.6793,
+    "meters": 633.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1974,
+    "pbi": 3609.2012,
+    "meters": 633.9993
+  },
+  {
+    "city_country": "Italy",
+    "year": 1975,
+    "pbi": 4093.4466,
+    "meters": 1322.6659
+  },
+  {
+    "city_country": "Italy",
+    "year": 1976,
+    "pbi": 4019.7959,
+    "meters": 1419.4894
+  },
+  {
+    "city_country": "Italy",
+    "year": 1977,
+    "pbi": 4588.4143,
+    "meters": 1419.4894
+  },
+  {
+    "city_country": "Italy",
+    "year": 1978,
+    "pbi": 5591.9914,
+    "meters": 1419.4894
+  },
+  {
+    "city_country": "Italy",
+    "year": 1979,
+    "pbi": 6967.2278,
+    "meters": 8897.8228
+  },
+  {
+    "city_country": "Italy",
+    "year": 1980,
+    "pbi": 8429.0232,
+    "meters": 9895.8869
+  },
+  {
+    "city_country": "Italy",
+    "year": 1981,
+    "pbi": 7597.6888,
+    "meters": 10327.6299
+  },
+  {
+    "city_country": "Italy",
+    "year": 1982,
+    "pbi": 7531.5976,
+    "meters": 2537.4749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1983,
+    "pbi": 7806.739,
+    "meters": 4293.9749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1984,
+    "pbi": 7714.1852,
+    "meters": 3816.9749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1985,
+    "pbi": 7964.3286,
+    "meters": 3816.9749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1986,
+    "pbi": 11277.6917,
+    "meters": 2131.8083
+  },
+  {
+    "city_country": "Italy",
+    "year": 1987,
+    "pbi": 14187.7742,
+    "meters": 1764.9749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1988,
+    "pbi": 15692.7262,
+    "meters": 1764.9749
+  },
+  {
+    "city_country": "Italy",
+    "year": 1989,
+    "pbi": 16332.6095,
+    "meters": 2707.948
+  },
+  {
+    "city_country": "Italy",
+    "year": 1990,
+    "pbi": 20757.0887,
+    "meters": 2977.448
+  },
+  {
+    "city_country": "Italy",
+    "year": 1991,
+    "pbi": 21884.1044,
+    "meters": 2112.7675
+  },
+  {
+    "city_country": "Italy",
+    "year": 1992,
+    "pbi": 23166.8041,
+    "meters": 1870.9341
+  },
+  {
+    "city_country": "Italy",
+    "year": 1993,
+    "pbi": 18676.9526,
+    "meters": 1870.9341
+  },
+  {
+    "city_country": "Italy",
+    "year": 1994,
+    "pbi": 19273.8442,
+    "meters": 1619.8798
+  },
+  {
+    "city_country": "Italy",
+    "year": 1995,
+    "pbi": 20596.3886,
+    "meters": 1350.3798
+  },
+  {
+    "city_country": "Italy",
+    "year": 1996,
+    "pbi": 23020.0999,
+    "meters": 1741.6465
+  },
+  {
+    "city_country": "Italy",
+    "year": 1997,
+    "pbi": 21779.6244,
+    "meters": 1741.6465
+  },
+  {
+    "city_country": "Italy",
+    "year": 1998,
+    "pbi": 22252.3581,
+    "meters": 1050.3965
+  },
+  {
+    "city_country": "Italy",
+    "year": 1999,
+    "pbi": 21936.8231,
+    "meters": 2013.1465
+  },
+  {
+    "city_country": "Italy",
+    "year": 2000,
+    "pbi": 20051.2422,
+    "meters": 2483.9222
+  },
+  {
+    "city_country": "Italy",
+    "year": 2001,
+    "pbi": 20400.8111,
+    "meters": 2772.6722
+  },
+  {
+    "city_country": "Italy",
+    "year": 2002,
+    "pbi": 22196.5068,
+    "meters": 3394.6278
+  },
+  {
+    "city_country": "Italy",
+    "year": 2003,
+    "pbi": 27387.2263,
+    "meters": 3051.3713
+  },
+  {
+    "city_country": "Italy",
+    "year": 2004,
+    "pbi": 31174.5611,
+    "meters": 2838.1213
+  },
+  {
+    "city_country": "Italy",
+    "year": 2005,
+    "pbi": 31959.263,
+    "meters": 10847.8118
+  },
+  {
+    "city_country": "Italy",
+    "year": 2006,
+    "pbi": 33410.7474,
+    "meters": 9511.3952
+  },
+  {
+    "city_country": "Italy",
+    "year": 2007,
+    "pbi": 37698.7866,
+    "meters": 5631.9154
+  },
+  {
+    "city_country": "Italy",
+    "year": 2008,
+    "pbi": 40640.1839,
+    "meters": 7235.1954
+  },
+  {
+    "city_country": "Italy",
+    "year": 2009,
+    "pbi": 36976.8455,
+    "meters": 7221.5086
+  },
+  {
+    "city_country": "Italy",
+    "year": 2010,
+    "pbi": 35849.3732,
+    "meters": 7691.0086
+  },
+  {
+    "city_country": "Italy",
+    "year": 2011,
+    "pbi": 38334.6838,
+    "meters": 7691.0086
+  },
+  {
+    "city_country": "Italy",
+    "year": 2012,
+    "pbi": 34814.1251,
+    "meters": 7726.1501
+  },
+  {
+    "city_country": "Italy",
+    "year": 2013,
+    "pbi": 35370.2753,
+    "meters": 7183.7096
+  },
+  {
+    "city_country": "Italy",
+    "year": 2014,
+    "pbi": 35396.6657,
+    "meters": 6286.1711
+  },
+  {
+    "city_country": "Italy",
+    "year": 2015,
+    "pbi": 30180.3215,
+    "meters": 4190.7425
+  },
+  {
+    "city_country": "Italy",
+    "year": 2016,
+    "pbi": 30668.9814,
+    "meters": 1346.7342
+  },
+  {
+    "city_country": "Italy",
+    "year": 2017,
+    "pbi": 0,
+    "meters": 451.4009
+  },
+  {
+    "city_country": "Japan",
+    "year": 1960,
+    "pbi": 478.9953,
+    "meters": 10215.5
+  },
+  {
+    "city_country": "Japan",
+    "year": 1961,
+    "pbi": 563.5868,
+    "meters": 43016.5
+  },
+  {
+    "city_country": "Japan",
+    "year": 1962,
+    "pbi": 633.6403,
+    "meters": 44784
+  },
+  {
+    "city_country": "Japan",
+    "year": 1963,
+    "pbi": 717.8669,
+    "meters": 26265
+  },
+  {
+    "city_country": "Japan",
+    "year": 1964,
+    "pbi": 835.6573,
+    "meters": 19756
+  },
+  {
+    "city_country": "Japan",
+    "year": 1965,
+    "pbi": 919.7767,
+    "meters": 7675
+  },
+  {
+    "city_country": "Japan",
+    "year": 1966,
+    "pbi": 1058.5036,
+    "meters": 16390.6667
+  },
+  {
+    "city_country": "Japan",
+    "year": 1967,
+    "pbi": 1228.9092,
+    "meters": 21878.1667
+  },
+  {
+    "city_country": "Japan",
+    "year": 1968,
+    "pbi": 1450.6197,
+    "meters": 21688.3333
+  },
+  {
+    "city_country": "Japan",
+    "year": 1969,
+    "pbi": 1669.0982,
+    "meters": 15793.8333
+  },
+  {
+    "city_country": "Japan",
+    "year": 1970,
+    "pbi": 2027.0659,
+    "meters": 10087.1667
+  },
+  {
+    "city_country": "Japan",
+    "year": 1971,
+    "pbi": 2260.3759,
+    "meters": 11867.5476
+  },
+  {
+    "city_country": "Japan",
+    "year": 1972,
+    "pbi": 2951.7609,
+    "meters": 14860.9568
+  },
+  {
+    "city_country": "Japan",
+    "year": 1973,
+    "pbi": 3977.2511,
+    "meters": 10991.1235
+  },
+  {
+    "city_country": "Japan",
+    "year": 1974,
+    "pbi": 4331.4009,
+    "meters": 7170.1235
+  },
+  {
+    "city_country": "Japan",
+    "year": 1975,
+    "pbi": 4635.1243,
+    "meters": 4534.1235
+  },
+  {
+    "city_country": "Japan",
+    "year": 1976,
+    "pbi": 5171.0365,
+    "meters": 4842.8735
+  },
+  {
+    "city_country": "Japan",
+    "year": 1977,
+    "pbi": 6303.1565,
+    "meters": 5244.2068
+  },
+  {
+    "city_country": "Japan",
+    "year": 1978,
+    "pbi": 8776.4085,
+    "meters": 5493.9846
+  },
+  {
+    "city_country": "Japan",
+    "year": 1979,
+    "pbi": 9058.242,
+    "meters": 3124.6036
+  },
+  {
+    "city_country": "Japan",
+    "year": 1980,
+    "pbi": 9416.6303,
+    "meters": 3450.7941
+  },
+  {
+    "city_country": "Japan",
+    "year": 1981,
+    "pbi": 10331.7415,
+    "meters": 2440.3774
+  },
+  {
+    "city_country": "Japan",
+    "year": 1982,
+    "pbi": 9539.0803,
+    "meters": 3453.3774
+  },
+  {
+    "city_country": "Japan",
+    "year": 1983,
+    "pbi": 10333.3401,
+    "meters": 4774.6441
+  },
+  {
+    "city_country": "Japan",
+    "year": 1984,
+    "pbi": 10912.8633,
+    "meters": 3439.8562
+  },
+  {
+    "city_country": "Japan",
+    "year": 1985,
+    "pbi": 11599.7384,
+    "meters": 3439.8562
+  },
+  {
+    "city_country": "Japan",
+    "year": 1986,
+    "pbi": 17079.5957,
+    "meters": 6857.6562
+  },
+  {
+    "city_country": "Japan",
+    "year": 1987,
+    "pbi": 20593.5236,
+    "meters": 5258.9895
+  },
+  {
+    "city_country": "Japan",
+    "year": 1988,
+    "pbi": 24880.2149,
+    "meters": 5009.2118
+  },
+  {
+    "city_country": "Japan",
+    "year": 1989,
+    "pbi": 24792.1932,
+    "meters": 6300.4975
+  },
+  {
+    "city_country": "Japan",
+    "year": 1990,
+    "pbi": 25417.2794,
+    "meters": 10516.3714
+  },
+  {
+    "city_country": "Japan",
+    "year": 1991,
+    "pbi": 28874.359,
+    "meters": 9842.8159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1992,
+    "pbi": 31376.1379,
+    "meters": 18071.7159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1993,
+    "pbi": 35865.6559,
+    "meters": 19740.4159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1994,
+    "pbi": 39268.5669,
+    "meters": 19740.4159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1995,
+    "pbi": 43440.3679,
+    "meters": 20340.4159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1996,
+    "pbi": 38436.9263,
+    "meters": 20340.4159
+  },
+  {
+    "city_country": "Japan",
+    "year": 1997,
+    "pbi": 35021.7191,
+    "meters": 23229.0052
+  },
+  {
+    "city_country": "Japan",
+    "year": 1998,
+    "pbi": 31902.7671,
+    "meters": 17287.7194
+  },
+  {
+    "city_country": "Japan",
+    "year": 1999,
+    "pbi": 36026.5561,
+    "meters": 17287.7194
+  },
+  {
+    "city_country": "Japan",
+    "year": 2000,
+    "pbi": 38532.0409,
+    "meters": 17287.7194
+  },
+  {
+    "city_country": "Japan",
+    "year": 2001,
+    "pbi": 33846.4656,
+    "meters": 10804.775
+  },
+  {
+    "city_country": "Japan",
+    "year": 2002,
+    "pbi": 32289.3505,
+    "meters": 10804.775
+  },
+  {
+    "city_country": "Japan",
+    "year": 2003,
+    "pbi": 34808.3909,
+    "meters": 10645.575
+  },
+  {
+    "city_country": "Japan",
+    "year": 2004,
+    "pbi": 37688.7223,
+    "meters": 8976.875
+  },
+  {
+    "city_country": "Japan",
+    "year": 2005,
+    "pbi": 37217.6487,
+    "meters": 8976.875
+  },
+  {
+    "city_country": "Japan",
+    "year": 2006,
+    "pbi": 35433.989,
+    "meters": 4541
+  },
+  {
+    "city_country": "Japan",
+    "year": 2007,
+    "pbi": 35275.2284,
+    "meters": 4541
+  },
+  {
+    "city_country": "Japan",
+    "year": 2008,
+    "pbi": 39339.2976,
+    "meters": 4541
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2002,
+    "pbi": 7106.082,
+    "meters": 254.3333
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2003,
+    "pbi": 6751.999,
+    "meters": 10418.8333
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2004,
+    "pbi": 7199.0597,
+    "meters": 10418.8333
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2005,
+    "pbi": 7986.7984,
+    "meters": 18869.1667
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2006,
+    "pbi": 8767.9203,
+    "meters": 11317.3333
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2007,
+    "pbi": 9330.3417,
+    "meters": 104594.3333
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2008,
+    "pbi": 9689.0529,
+    "meters": 104718
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2009,
+    "pbi": 7748.1233,
+    "meters": 784.6667
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2010,
+    "pbi": 8959.5814,
+    "meters": 17178.1667
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2011,
+    "pbi": 9834.4727,
+    "meters": 60069.1667
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2012,
+    "pbi": 9820.5326,
+    "meters": 44925.5
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2013,
+    "pbi": 10298.8677,
+    "meters": 0
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2014,
+    "pbi": 10452.7835,
+    "meters": 20504.5
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2015,
+    "pbi": 9152.8723,
+    "meters": 20504.5
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2016,
+    "pbi": 8208.556,
+    "meters": 48345.5
+  },
+  {
+    "city_country": "Mexico",
+    "year": 2017,
+    "pbi": 0,
+    "meters": 27841
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1980,
+    "pbi": 3368.6984,
+    "meters": 1110.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1981,
+    "pbi": 3246.2946,
+    "meters": 1110.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1982,
+    "pbi": 3080.2527,
+    "meters": 1110.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1994,
+    "pbi": 9978.3019,
+    "meters": 1074.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1995,
+    "pbi": 11782.5215,
+    "meters": 1669.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1996,
+    "pbi": 12185.0639,
+    "meters": 1669.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1997,
+    "pbi": 11578.4415,
+    "meters": 2083.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 1998,
+    "pbi": 12202.6914,
+    "meters": 1488.5
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2000,
+    "pbi": 11502.3968,
+    "meters": 1431.75
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2001,
+    "pbi": 11729.1462,
+    "meters": 1431.75
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2002,
+    "pbi": 12882.289,
+    "meters": 2115.25
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2003,
+    "pbi": 15772.7334,
+    "meters": 1732.25
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2004,
+    "pbi": 18045.5881,
+    "meters": 2326.25
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2005,
+    "pbi": 18784.9485,
+    "meters": 594
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2006,
+    "pbi": 19821.4446,
+    "meters": 594
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2007,
+    "pbi": 22780.0585,
+    "meters": 1471
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2008,
+    "pbi": 24815.6088,
+    "meters": 877
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2009,
+    "pbi": 23063.9716,
+    "meters": 877
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2010,
+    "pbi": 22538.6541,
+    "meters": 1250
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2011,
+    "pbi": 23196.1838,
+    "meters": 1250
+  },
+  {
+    "city_country": "Portugal",
+    "year": 2012,
+    "pbi": 20577.4026,
+    "meters": 1250
+  },
+  {
+    "city_country": "Spain",
+    "year": 1960,
+    "pbi": 396.3923,
+    "meters": 2054.405
+  },
+  {
+    "city_country": "Spain",
+    "year": 1961,
+    "pbi": 450.0533,
+    "meters": 2054.405
+  },
+  {
+    "city_country": "Spain",
+    "year": 1962,
+    "pbi": 520.2061,
+    "meters": 546.805
+  },
+  {
+    "city_country": "Spain",
+    "year": 1963,
+    "pbi": 609.4874,
+    "meters": 2852.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1964,
+    "pbi": 675.2416,
+    "meters": 2659.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1965,
+    "pbi": 774.7616,
+    "meters": 3625.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1966,
+    "pbi": 889.6599,
+    "meters": 3625.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1967,
+    "pbi": 968.3068,
+    "meters": 3625.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1968,
+    "pbi": 950.5457,
+    "meters": 3625.005
+  },
+  {
+    "city_country": "Spain",
+    "year": 1969,
+    "pbi": 1077.6787,
+    "meters": 1471.3029
+  },
+  {
+    "city_country": "Spain",
+    "year": 1970,
+    "pbi": 1208.9967,
+    "meters": 1468.5045
+  },
+  {
+    "city_country": "Spain",
+    "year": 1971,
+    "pbi": 1358.4657,
+    "meters": 6056.5219
+  },
+  {
+    "city_country": "Spain",
+    "year": 1972,
+    "pbi": 1704.1674,
+    "meters": 6056.5219
+  },
+  {
+    "city_country": "Spain",
+    "year": 1973,
+    "pbi": 2241.4488,
+    "meters": 6056.5219
+  },
+  {
+    "city_country": "Spain",
+    "year": 1974,
+    "pbi": 2742.4556,
+    "meters": 5574.0219
+  },
+  {
+    "city_country": "Spain",
+    "year": 1975,
+    "pbi": 3201.1192,
+    "meters": 3426.8386
+  },
+  {
+    "city_country": "Spain",
+    "year": 1976,
+    "pbi": 3270.4057,
+    "meters": 1425.3688
+  },
+  {
+    "city_country": "Spain",
+    "year": 1977,
+    "pbi": 3617.7378,
+    "meters": 3741.1021
+  },
+  {
+    "city_country": "Spain",
+    "year": 1978,
+    "pbi": 4344.6067,
+    "meters": 4207.4355
+  },
+  {
+    "city_country": "Spain",
+    "year": 1979,
+    "pbi": 5754.5422,
+    "meters": 6484.6855
+  },
+  {
+    "city_country": "Spain",
+    "year": 1980,
+    "pbi": 6191.7149,
+    "meters": 6009.6021
+  },
+  {
+    "city_country": "Spain",
+    "year": 1981,
+    "pbi": 5356.5778,
+    "meters": 3265.8688
+  },
+  {
+    "city_country": "Spain",
+    "year": 1982,
+    "pbi": 5145.6944,
+    "meters": 2799.5355
+  },
+  {
+    "city_country": "Spain",
+    "year": 1983,
+    "pbi": 4466.3363,
+    "meters": 2799.5355
+  },
+  {
+    "city_country": "Spain",
+    "year": 1984,
+    "pbi": 4477.7937,
+    "meters": 520.2855
+  },
+  {
+    "city_country": "Spain",
+    "year": 1985,
+    "pbi": 4686.8911,
+    "meters": 520.2855
+  },
+  {
+    "city_country": "Spain",
+    "year": 1986,
+    "pbi": 6495.812,
+    "meters": 867.2832
+  },
+  {
+    "city_country": "Spain",
+    "year": 1987,
+    "pbi": 8217.2343,
+    "meters": 480.6165
+  },
+  {
+    "city_country": "Spain",
+    "year": 1988,
+    "pbi": 9676.7693,
+    "meters": 479.4857
+  },
+  {
+    "city_country": "Spain",
+    "year": 1989,
+    "pbi": 10652.958,
+    "meters": 130.9857
+  },
+  {
+    "city_country": "Spain",
+    "year": 1990,
+    "pbi": 13767.3815,
+    "meters": 806.5528
+  },
+  {
+    "city_country": "Spain",
+    "year": 1991,
+    "pbi": 14771.6723,
+    "meters": 806.5528
+  },
+  {
+    "city_country": "Spain",
+    "year": 1992,
+    "pbi": 16068.4267,
+    "meters": 806.5528
+  },
+  {
+    "city_country": "Spain",
+    "year": 1993,
+    "pbi": 13303.6761,
+    "meters": 806.1331
+  },
+  {
+    "city_country": "Spain",
+    "year": 1994,
+    "pbi": 13378.8498,
+    "meters": 3208.1331
+  },
+  {
+    "city_country": "Spain",
+    "year": 1995,
+    "pbi": 15429.9394,
+    "meters": 15750.6927
+  },
+  {
+    "city_country": "Spain",
+    "year": 1996,
+    "pbi": 16069.2071,
+    "meters": 15160.9613
+  },
+  {
+    "city_country": "Spain",
+    "year": 1997,
+    "pbi": 14696.2161,
+    "meters": 15160.9613
+  },
+  {
+    "city_country": "Spain",
+    "year": 1998,
+    "pbi": 15340.3321,
+    "meters": 15159.2402
+  },
+  {
+    "city_country": "Spain",
+    "year": 1999,
+    "pbi": 15678.2152,
+    "meters": 49644.8236
+  },
+  {
+    "city_country": "Spain",
+    "year": 2000,
+    "pbi": 14676.7061,
+    "meters": 42330.5736
+  },
+  {
+    "city_country": "Spain",
+    "year": 2001,
+    "pbi": 15323.6114,
+    "meters": 42330.5736
+  },
+  {
+    "city_country": "Spain",
+    "year": 2002,
+    "pbi": 17019.5354,
+    "meters": 43000.5736
+  },
+  {
+    "city_country": "Spain",
+    "year": 2003,
+    "pbi": 21495.7074,
+    "meters": 53096.6
+  },
+  {
+    "city_country": "Spain",
+    "year": 2004,
+    "pbi": 24918.6458,
+    "meters": 14299.35
+  },
+  {
+    "city_country": "Spain",
+    "year": 2005,
+    "pbi": 26510.7175,
+    "meters": 14756.85
+  },
+  {
+    "city_country": "Spain",
+    "year": 2006,
+    "pbi": 28482.6095,
+    "meters": 16295.35
+  },
+  {
+    "city_country": "Spain",
+    "year": 2007,
+    "pbi": 32709.401,
+    "meters": 20210.6
+  },
+  {
+    "city_country": "Spain",
+    "year": 2008,
+    "pbi": 35579.3099,
+    "meters": 6967.35
+  },
+  {
+    "city_country": "Spain",
+    "year": 2009,
+    "pbi": 32334.0055,
+    "meters": 6388.25
+  },
+  {
+    "city_country": "Spain",
+    "year": 2010,
+    "pbi": 30736.6279,
+    "meters": 6388.25
+  },
+  {
+    "city_country": "Spain",
+    "year": 2011,
+    "pbi": 31835.2888,
+    "meters": 6023.4167
+  },
+  {
+    "city_country": "Spain",
+    "year": 2012,
+    "pbi": 28563.859,
+    "meters": 1038
+  },
+  {
+    "city_country": "Spain",
+    "year": 2013,
+    "pbi": 29211.7737,
+    "meters": 1038
+  },
+  {
+    "city_country": "Spain",
+    "year": 2014,
+    "pbi": 29623.1644,
+    "meters": 3114
+  },
+  {
+    "city_country": "Spain",
+    "year": 2015,
+    "pbi": 25789.5195,
+    "meters": 3738
+  },
+  {
+    "city_country": "Spain",
+    "year": 2016,
+    "pbi": 26616.4881,
+    "meters": 3354.6667
+  },
+  {
+    "city_country": "Spain",
+    "year": 2017,
+    "pbi": 0,
+    "meters": 3354.6667
   }
 ]

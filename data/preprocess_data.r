@@ -145,7 +145,7 @@ select
  from YEARS y
  join pbi on y.year = pbi.year
  left join underground u on pbi.country = u.city_country and y.year between u.station_buildstart and u.station_opening
- where pbi.country = 'Chile' and y.year between u.station_buildstart and u.station_opening and  ( u.city_country is null or
+ where y.year between u.station_buildstart and u.station_opening and  ( u.city_country is null or
  ( 
  u.system_name like '%subte%' 
  or u.system_name like 'underground' 
