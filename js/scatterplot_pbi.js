@@ -53,7 +53,6 @@ function renderScatterPlot_pbi(country, minDate, maxDate) {
       .data([data])
       .attr("class", "line_multi")
       .attr("d", valueline);
-  console.log(data);
   // Add the valueline2 path.
   svg.append("path")
       .data([data])

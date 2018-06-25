@@ -24,12 +24,12 @@ for(var key in countryIsoCode) {
 function init() {
     d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/lines.json?cacheBreak=" + new Date().getTime()).then(function(data) {
         d3.json("https://raw.githubusercontent.com/gabz129/visualization-d3/master/data/pbi.json?cacheBreak=" + new Date().getTime()).then(function (dataPbi) {
+            countrySelection = countries;
             rawData = data;
-            rawData.filter(item => item.station_meters >= 0);
             pbiRawData = dataPbi;
             //Render plots
-            renderBarChart();
             renderTimeLine(countries);
+            renderBarChart(null, null, true);
         });
     });
 }

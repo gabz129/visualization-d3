@@ -159,7 +159,7 @@ function renderTimeLine(countries) {
 
   function updateCurrentExtent() {
     currentExtent = d3.brushSelection(this);
-    callRenderBarChart(x2, currentExtent)
+    // callRenderBarChart(x2, currentExtent)
   }
 
   function brushed() {
